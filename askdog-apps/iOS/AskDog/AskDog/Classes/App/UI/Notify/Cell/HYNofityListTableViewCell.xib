@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="HYNofityListTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LrW-Gx-4MT">
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xiR-VW-bjV">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfP-7T-F8o">
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="X0z-H3-c0G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xiR-VW-bjV" secondAttribute="trailing" id="3g6-UJ-wJu"/>
+                            <constraint firstItem="bfP-7T-F8o" firstAttribute="leading" secondItem="LrW-Gx-4MT" secondAttribute="leading" constant="4" id="8p4-7H-yWG"/>
+                            <constraint firstAttribute="bottom" secondItem="xiR-VW-bjV" secondAttribute="bottom" constant="1" id="DZn-kk-XDt"/>
+                            <constraint firstItem="xiR-VW-bjV" firstAttribute="leading" secondItem="LrW-Gx-4MT" secondAttribute="leading" constant="10" id="ZJq-Cf-MjA"/>
+                            <constraint firstAttribute="bottom" secondItem="bfP-7T-F8o" secondAttribute="bottom" id="l9p-A8-q9X"/>
+                            <constraint firstAttribute="trailing" secondItem="bfP-7T-F8o" secondAttribute="trailing" constant="4" id="my4-7V-REj"/>
+                            <constraint firstItem="xiR-VW-bjV" firstAttribute="top" secondItem="LrW-Gx-4MT" secondAttribute="top" id="t8d-Eh-42s"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="LrW-Gx-4MT" secondAttribute="trailing" constant="-4" id="5B8-nH-CFb"/>
+                    <constraint firstItem="LrW-Gx-4MT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="Dys-4h-RRo"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LrW-Gx-4MT" secondAttribute="bottom" constant="-8" id="q7X-Aj-e7i"/>
+                    <constraint firstItem="LrW-Gx-4MT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="z9j-5F-hHJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bkView" destination="LrW-Gx-4MT" id="WF1-TU-vyl"/>
+                <outlet property="lblLine" destination="bfP-7T-F8o" id="fIx-KA-VM7"/>
+                <outlet property="textViewContent" destination="xiR-VW-bjV" id="Tb6-zy-Kco"/>
+            </connections>
+            <point key="canvasLocation" x="482" y="396"/>
+        </tableViewCell>
+    </objects>
+</document>

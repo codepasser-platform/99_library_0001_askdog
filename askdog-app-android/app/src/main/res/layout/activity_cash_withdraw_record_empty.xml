@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="150dp">
+
+
+    <ImageView
+        android:layout_width="@dimen/common_margin40"
+        android:layout_height="@dimen/common_margin40"
+        android:src="@drawable/no_withdraw" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin20"
+        android:text="您还没有提现"
+        android:textColor="@color/sliver"
+        android:textSize="@dimen/common_textsize_type14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin10"
+        android:text="发布一个视频经验赚取您的第一桶金"
+        android:textColor="@color/sliver"
+        android:textSize="@dimen/common_textsize_type14" />
+</LinearLayout>

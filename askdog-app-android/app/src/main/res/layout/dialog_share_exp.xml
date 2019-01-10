@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingLeft="@dimen/common_margin30"
+    android:paddingRight="@dimen/common_margin30"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout style="@style/dalog_share_style"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/share_exp_video"
+
+                android:layout_width="@dimen/common_margin50"
+                android:layout_height="@dimen/common_margin50"
+                android:src="@drawable/dialog_share_video" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/dalog_share_style"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/share_exp_word"
+
+                android:layout_width="@dimen/common_margin50"
+                android:layout_height="@dimen/common_margin50"
+                android:src="@drawable/dialog_share_word" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/share_exp_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_margin="@dimen/common_margin30"
+        android:text="@string/alert_dialog_cancel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_textsize_type18" />
+</LinearLayout>

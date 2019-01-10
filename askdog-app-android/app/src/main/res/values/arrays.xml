@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="me_title">
+        <item>我的频道</item>
+        <item>订阅频道</item>
+        <item>历史浏览</item>
+        <item>我的收入</item>
+        <item>安全中心</item>
+        <item>系统设置</item>
+    </string-array>
+
+    <string-array name="gender_choice">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+</resources>

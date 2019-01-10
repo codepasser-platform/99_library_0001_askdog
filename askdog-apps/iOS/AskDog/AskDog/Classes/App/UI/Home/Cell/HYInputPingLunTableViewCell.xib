@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="HYInputPingLunTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEL-KO-uAm">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvatarDefault" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-K3-Di0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FVf-iN-uPy"/>
+                                    <constraint firstAttribute="width" constant="45" id="gl9-a3-t5w"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="在这里输入评论" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wpa-NP-7OS" customClass="PlaceholderTextView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="hJY-r4-90B"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsw-7d-eFX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="URh-16-iMa"/>
+                                    <constraint firstAttribute="width" constant="50" id="cbN-UU-6rx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCancelClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hyW-Ug-5bT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywP-ch-gQc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="82W-6d-eJf"/>
+                                    <constraint firstAttribute="width" constant="50" id="wBn-dt-mhp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="评论">
+                                    <color key="titleColor" red="0.0" green="0.66666666669999997" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPinglunClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xJl-wZ-hmG"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="V " translatesAutoresizingMaskIntoConstraints="NO" id="4ow-ot-hcf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="Nbx-Ri-qbN"/>
+                                    <constraint firstAttribute="height" constant="12" id="wXZ-1j-rCz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zsw-7d-eFX" secondAttribute="bottom" constant="5" id="2tY-xo-r1t"/>
+                            <constraint firstItem="ywP-ch-gQc" firstAttribute="leading" secondItem="zsw-7d-eFX" secondAttribute="trailing" constant="8" id="9to-x7-1fo"/>
+                            <constraint firstAttribute="trailing" secondItem="ywP-ch-gQc" secondAttribute="trailing" constant="15" id="Ajf-4o-Ser"/>
+                            <constraint firstItem="Wpa-NP-7OS" firstAttribute="leading" secondItem="PW0-K3-Di0" secondAttribute="trailing" constant="8" id="AlT-D6-Hmz"/>
+                            <constraint firstAttribute="bottom" secondItem="ywP-ch-gQc" secondAttribute="bottom" constant="5" id="GPF-QB-cBi"/>
+                            <constraint firstItem="4ow-ot-hcf" firstAttribute="leading" secondItem="IEL-KO-uAm" secondAttribute="leading" constant="46" id="GQ2-aA-lf1"/>
+                            <constraint firstItem="4ow-ot-hcf" firstAttribute="top" secondItem="IEL-KO-uAm" secondAttribute="top" constant="46" id="N26-DA-XJs"/>
+                            <constraint firstItem="ywP-ch-gQc" firstAttribute="top" secondItem="Wpa-NP-7OS" secondAttribute="bottom" constant="8" id="RoJ-2Q-3pF"/>
+                            <constraint firstAttribute="trailing" secondItem="Wpa-NP-7OS" secondAttribute="trailing" constant="8" id="YEF-A4-Inc"/>
+                            <constraint firstItem="Wpa-NP-7OS" firstAttribute="top" secondItem="IEL-KO-uAm" secondAttribute="top" constant="13" id="ZzF-dx-0mT"/>
+                            <constraint firstItem="PW0-K3-Di0" firstAttribute="leading" secondItem="IEL-KO-uAm" secondAttribute="leading" constant="13" id="k8F-6H-Uwr"/>
+                            <constraint firstItem="PW0-K3-Di0" firstAttribute="top" secondItem="IEL-KO-uAm" secondAttribute="top" constant="13" id="sV5-gj-CBs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IEL-KO-uAm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="51k-DO-spz"/>
+                    <constraint firstItem="IEL-KO-uAm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="5ft-4L-L8Z"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="IEL-KO-uAm" secondAttribute="trailing" constant="-4" id="Z66-s9-cMS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="IEL-KO-uAm" secondAttribute="bottom" constant="-8" id="oYo-Kf-Jz1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="btnPingLun" destination="ywP-ch-gQc" id="sRR-cu-vNP"/>
+                <outlet property="headerImgV" destination="PW0-K3-Di0" id="CgL-g2-gDL"/>
+                <outlet property="headerWidth" destination="gl9-a3-t5w" id="icQ-eh-qRU"/>
+                <outlet property="textViewContent" destination="Wpa-NP-7OS" id="JXd-Lj-CnL"/>
+                <outlet property="vipImageV" destination="4ow-ot-hcf" id="rGm-gV-7ck"/>
+            </connections>
+            <point key="canvasLocation" x="502" y="351"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AvatarDefault" width="240" height="240"/>
+        <image name="V " width="80" height="80"/>
+    </resources>
+</document>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navi_header_height">
+
+    <ImageView
+        android:id="@+id/bar_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/common_margin10"
+        android:paddingRight="@dimen/common_margin10"
+        android:src="@drawable/ic_disclosure_indicator" />
+
+    <TextView
+        android:id="@+id/tab_login_title"
+        android:text="账号登陆"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="false"
+        android:enabled="false"
+        android:focusable="false"
+        android:textColor="@color/steel"
+        android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:background="#E6E6E6" />
+</RelativeLayout>

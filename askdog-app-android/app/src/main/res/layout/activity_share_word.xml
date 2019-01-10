@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        tools:context=".activity.share.ShareWordOneActivity">
+
+        <include layout="@layout/common_header_navi" />
+
+
+        <EditText android:id="@+id/share_word_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/common_margin5"
+            android:paddingTop="@dimen/common_margin10"
+            android:background="@drawable/input_box"
+            android:hint="@string/please_input_title"
+            android:layout_margin="@dimen/common_margin5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_textsize_type18" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_margin="@dimen/common_margin5"
+            android:background="@color/sliver" />
+
+        <com.askdog.android.view.searchview.ImageAndTextEditor android:id="@+id/share_word_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin5"
+            android:minHeight="150dp"
+            android:hint="@string/please_input_content"
+            android:background="@drawable/input_box"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_textsize_type18"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_margin="@dimen/common_margin5"
+            android:background="@color/sliver" />
+
+        <Button
+            android:id="@+id/share_word_insert_pic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/common_margin15"
+            android:background="@drawable/blue_bg_btn"
+            android:text="插入图片"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:textSize="@dimen/common_textsize_type16" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/result_item_height"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/common_margin3"
+    android:layout_marginTop="@dimen/common_margin3"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/common_margin10">
+
+        <ImageView
+            android:id="@+id/channel_item_thumb"
+            android:layout_width="@dimen/result_item_image_height"
+            android:layout_height="@dimen/result_item_image_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin5"
+            android:layout_toRightOf="@+id/channel_item_thumb"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/channel_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="@color/extra_dark_blue"
+                android:textSize="@dimen/common_textsize_type18" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_margin10">
+
+                <TextView
+                    android:id="@+id/channel_order_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/common_margin3"
+                    android:textColor="@color/steel"
+                    android:textSize="@dimen/common_textsize_type14" />
+                <!--Lineralayout 不要删除，否则点击区域会小-->
+                <LinearLayout
+                    android:id="@+id/my_channel_delete_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_margin10"
+                    android:visibility="gone"
+                    android:padding="@dimen/common_margin10">
+
+                    <ImageButton
+                        android:id="@+id/channel_delete_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/delete_menu"
+
+                        android:paddingLeft="@dimen/common_margin10"
+                        android:paddingRight="@dimen/common_margin10" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

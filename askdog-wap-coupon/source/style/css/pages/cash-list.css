@@ -1,0 +1,69 @@
+
+.coupon-list-item {
+    margin: 20px 20px;
+}
+
+.coupon-list-item .panel-body {
+    padding: 15px 10px 0px 10px;
+}
+
+.coupon-list-item .panel-head {
+    height: 19px;
+
+}
+
+.coupon-list-item .panel-body .coupon-name {
+    font-size: 20px;
+    color: #5f5f5f;
+    padding: 0;
+    line-height: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.coupon-list-item .panel-body .coupon-subject {
+    font-size: 26px;
+    color: #1a1a1a;
+    padding: 0;
+    line-height: 26px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 130px;
+}
+
+.coupon-list-item .panel-body .coupon-cash {
+    font-size: 40px;
+    color: #ff7b00;
+    line-height: 40px;
+
+}
+
+.coupon-list-item .panel-body .coupon-next {
+    line-height: 40px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 10px;
+    color: #ff7b00;
+}
+
+.coupon-list-item .coupon-dashed {
+    border-top: 2px dashed #d8d8d8;
+    text-align: right;
+
+}
+
+.coupon-list-item .coupon-dashed span {
+    color: #5f5f5f;
+    font-size: 12px;
+    vertical-align: middle;
+    line-height:30px;
+}
+
+.panel-head-upgraud + .panel-body .coupon-name,
+.panel-head-upgraud + .panel-body .coupon-subject,
+.panel-head-upgraud + .panel-body .coupon-cash,
+.panel-head-upgraud + .panel-body .coupon-next {
+    color: #8792a4 !important;
+}

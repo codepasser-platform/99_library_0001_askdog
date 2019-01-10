@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.login.SubscribeActivity">
+
+    <RelativeLayout
+        android:id="@+id/subscribe_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingBottom="2dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/tab_login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="账号登陆"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="#E6E6E6" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/subscribe_goto_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subscribe_goto_layout_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/subscribe_goto"
+            android:textSize="@dimen/common_textsize_type16" />
+
+    </LinearLayout>
+    <!--以此为分界线-->
+    <GridView
+        android:id="@+id/subscribe_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:layoutAnimation="@anim/rootview_anim"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"></GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="15dp">
+
+        <Button
+            android:id="@+id/subscribe_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/blue_bg_btn"
+            android:gravity="center"
+            android:text="@string/subscribe_text"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/common_textsize_type18" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Page title set in pageTitle directive -->
+    <title page-title>惠券 - 以优惠发现美味</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="style/images/favicon.ico" type="image/ico">
+    <link rel="icon" href="style/images/favicon.ico" type="image/x-icon">
+
+    <!-- build:css -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/iconfont/iconfont.css" rel="stylesheet">
+    <link href="style/css/askdog.css" rel="stylesheet">
+    <!-- end build -->
+
+</head>
+
+<body>
+
+<!-- Main view  -->
+<div ui-view>
+    <span style="position: fixed;top: 10px; left:10px;color:#1a1a1a;">加载中...</span>
+</div>
+
+<!-- build:js -->
+<script src="lib/require.js" data-main="script/main.js"></script>
+<!-- endbuild -->
+<script>
+    require.config({
+        urlArgs: function (id, url) {
+            var args = 'v=1';
+            return (url.indexOf('?') === -1 ? '?' : '&') + args;
+        }
+    });
+</script>
+
+</body>
+</html>

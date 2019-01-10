@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.askdog</groupId>
+    <artifactId>askdog-platform</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.2-SNAPSHOT</version>
+
+    <modules>
+        <module>askdog-common</module>
+        <module>askdog-web</module>
+        <module>askdog-model</module>
+        <module>askdog-service</module>
+        <module>askdog-sync</module>
+        <module>askdog-configuration-server</module>
+        <module>askdog-store-parent</module>
+        <module>askdog-service-impl</module>
+        <module>askdog-service-proxy</module>
+        <module>askdog-service-consumer</module>
+    </modules>
+
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.8.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <reactor-spring.version>2.0.7.RELEASE</reactor-spring.version>
+        <postgresql.version>9.4.1208.jre7</postgresql.version>
+        <spring-session.version>1.0.2.RELEASE</spring-session.version>
+        <spring-retry.version>1.1.1.RELEASE</spring-retry.version>
+        <jackson.version>2.6.5</jackson.version>
+        <aliyun-sdk-oss.version>2.2.1</aliyun-sdk-oss.version>
+        <httpclient.version>4.4</httpclient.version>
+        <hibernate-redis.version>1.6.1</hibernate-redis.version>
+        <elasticsearch.version>2.3.2</elasticsearch.version>
+        <zxing.version>3.2.1</zxing.version>
+        <docker.image.prefix>ask.dog</docker.image.prefix>
+        <logback-redis-appender>1.1.5</logback-redis-appender>
+    </properties>
+
+    <dependencyManagement>
+
+        <!-- modules -->
+        <dependencies>
+            <dependency>
+                <groupId>com.askdog</groupId>
+                <artifactId>askdog-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.askdog</groupId>
+                <artifactId>askdog-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.askdog</groupId>
+                <artifactId>askdog-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.askdog</groupId>
+                <artifactId>askdog-service-impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- spring boot expanding -->
+            <dependency>
+                <groupId>org.springframework.session</groupId>
+                <artifactId>spring-session</artifactId>
+                <version>${spring-session.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.retry</groupId>
+                <artifactId>spring-retry</artifactId>
+                <version>${spring-retry.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cwbase</groupId>
+                <artifactId>logback-redis-appender</artifactId>
+                <version>${logback-redis-appender}</version>
+            </dependency>
+
+            <!-- starters -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>Angel.SR6</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>org.springframework.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-netflix</artifactId>-->
+                <!--<version>1.0.7.RELEASE</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+            <!--</dependency>-->
+
+            <!-- Aliyun OSS -->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun-sdk-oss.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <!-- Google Zxing -->
+            <dependency>
+                <groupId>com.google.zxing</groupId>
+                <artifactId>core</artifactId>
+                <version>${zxing.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- util -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>3.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/docker</directory>
+                <filtering>true</filtering>
+                <targetPath>${project.build.directory}/docker</targetPath>
+            </resource>
+            <resource>
+                <directory>src/runner</directory>
+                <filtering>true</filtering>
+                <targetPath>${project.build.directory}/runner</targetPath>
+            </resource>
+        </resources>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.4.5</version>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                        <dockerDirectory>${project.build.directory}/docker</dockerDirectory>
+                        <pushImage>false</pushImage>
+                        <resources>
+                            <resource>
+                                <targetPath>/</targetPath>
+                                <directory>${project.build.directory}</directory>
+                                <include>${project.build.finalName}.jar</include>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

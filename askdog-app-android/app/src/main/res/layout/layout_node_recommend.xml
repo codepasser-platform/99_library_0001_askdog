@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/detail_recommend_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_margin5"
+                android:textColor="@color/steel"
+                android:textSize="@dimen/common_textsize_type16" />
+
+            <ImageView
+                android:id="@+id/detail_recommend_expand"
+                android:layout_width="@dimen/common_margin50"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/common_margin15"
+                android:src="@drawable/icon_pull_up" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_alignParentBottom="true"
+                android:background="@color/sliver" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_recommend_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/detail_recommend_avatar"
+                    android:layout_width="@dimen/common_avatar_size"
+                    android:layout_height="@dimen/common_avatar_size"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/avatar_default" />
+
+                <EditText
+                    android:id="@+id/detail_recommend_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_margin5"
+                    android:layout_toRightOf="@+id/detail_recommend_avatar"
+                    android:background="@drawable/gray_rectangle_line"
+                    android:maxLines="3"
+                    android:minLines="2"
+                    android:padding="@dimen/common_margin5"
+                    android:textColor="@color/steel"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/detail_recommend_release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/common_margin10"
+                    android:text="评论"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_recommend_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/detail_recommend_release"
+                    android:padding="@dimen/common_margin10"
+                    android:text="取消"
+                    android:textColor="@color/sliver"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

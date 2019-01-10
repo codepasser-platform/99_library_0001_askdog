@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.askdog.android.activity.cash.MyCashActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin3"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="@dimen/common_margin5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/steel_bg_radius"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin20"
+                android:text="可提现金额"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_textsize_type14" />
+
+            <TextView android:id="@+id/income_withdraw_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_textsize_type38" />
+
+            <TextView android:id="@+id/income_withdraw_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin20"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:background="@drawable/blue_bg_btn"
+                android:paddingBottom="@dimen/common_margin5"
+                android:paddingLeft="@dimen/common_margin20"
+                android:paddingRight="@dimen/common_margin20"
+                android:paddingTop="@dimen/common_margin5"
+                android:drawablePadding="@dimen/common_margin5"
+                android:drawableLeft="@drawable/withdraw"
+                android:text="提现"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_textsize_type16" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/common_margin5"
+        android:layout_margin="@dimen/common_margin3"
+        android:layout_height="wrap_content">
+
+        <LinearLayout android:id="@+id/income_detail_item_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin50">
+
+                <ImageView
+                    android:id="@+id/imcome_item_icon"
+                    android:layout_width="@dimen/common_item_icon_size"
+                    android:layout_height="@dimen/common_item_icon_size"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_profile_income"
+                    android:layout_marginLeft="@dimen/common_margin15" />
+
+                <TextView
+                    android:id="@+id/income_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_margin15"
+                    android:layout_toRightOf="@id/imcome_item_icon"
+                    android:textColor="@color/slate"
+                    android:text="收入明细"
+                    android:textSize="@dimen/common_textsize_type18" />
+
+                <ImageView
+
+                    android:layout_width="@dimen/common_item_icon_size"
+                    android:layout_height="@dimen/common_item_icon_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/common_margin10"
+                    android:src="@drawable/profile_right_arrow" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="-1dp"
+                    android:background="@color/smoke" />
+            </RelativeLayout>
+
+            <RelativeLayout android:id="@+id/withdraw_record_item_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin50">
+
+                <ImageView
+                    android:id="@+id/me_item_icon"
+                    android:layout_width="@dimen/common_item_icon_size"
+                    android:layout_height="@dimen/common_item_icon_size"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_profile_withdraw_record"
+                    android:layout_marginLeft="@dimen/common_margin15" />
+
+                <TextView
+                    android:id="@+id/me_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/common_margin15"
+                    android:layout_toRightOf="@id/me_item_icon"
+                    android:textColor="@color/slate"
+                    android:text="提现记录"
+                    android:textSize="@dimen/common_textsize_type18" />
+
+                <ImageView
+                    android:id="@+id/me_item_arrow"
+                    android:layout_width="@dimen/common_item_icon_size"
+                    android:layout_height="@dimen/common_item_icon_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/common_margin10"
+                    android:src="@drawable/profile_right_arrow" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

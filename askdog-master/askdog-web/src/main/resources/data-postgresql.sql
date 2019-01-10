@@ -1,0 +1,1 @@
+INSERT INTO OAUTH_CLIENT_DETAILS VALUES('acme', '', 'acmesecret', 'openid', 'authorization_code,refresh_token,password', '', '', NULL, NULL, '{}', '');

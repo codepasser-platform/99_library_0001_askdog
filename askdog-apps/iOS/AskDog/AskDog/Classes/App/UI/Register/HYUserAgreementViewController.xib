@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYUserAgreementViewController" customModule="AskDog" customModuleProvider="target">
+            <connections>
+                <outlet property="textViewContent" destination="sEp-Lf-Zg0" id="hgE-OJ-OuE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEp-Lf-Zg0">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS9-eV-2Sm">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="PMS-tv-9UQ"/>
+                        <constraint firstAttribute="width" constant="99" id="vkJ-ok-9uE"/>
+                    </constraints>
+                    <state key="normal" title="同意"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PMS-tv-9UQ"/>
+                            <exclude reference="vkJ-ok-9uE"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="PMS-tv-9UQ"/>
+                            <include reference="vkJ-ok-9uE"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="btnAgreeClicked:" destination="-1" eventType="touchUpInside" id="QZA-Ui-2st"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hS9-eV-2Sm" secondAttribute="bottom" constant="27" id="FF3-jJ-mDB"/>
+                <constraint firstItem="hS9-eV-2Sm" firstAttribute="top" secondItem="sEp-Lf-Zg0" secondAttribute="bottom" constant="23" id="K00-7m-O2B"/>
+                <constraint firstAttribute="trailing" secondItem="sEp-Lf-Zg0" secondAttribute="trailing" id="NrY-XX-FMg"/>
+                <constraint firstItem="sEp-Lf-Zg0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lVi-CD-6gv"/>
+                <constraint firstItem="hS9-eV-2Sm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uZi-bc-fvC"/>
+                <constraint firstItem="sEp-Lf-Zg0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="vfs-hy-eLc">
+                    <variation key="heightClass=regular-widthClass=compact" constant="66"/>
+                </constraint>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="sEp-Lf-Zg0"/>
+                    <exclude reference="hS9-eV-2Sm"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="FF3-jJ-mDB"/>
+                    <exclude reference="K00-7m-O2B"/>
+                    <exclude reference="uZi-bc-fvC"/>
+                    <exclude reference="NrY-XX-FMg"/>
+                    <exclude reference="lVi-CD-6gv"/>
+                    <exclude reference="vfs-hy-eLc"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="sEp-Lf-Zg0"/>
+                    <include reference="hS9-eV-2Sm"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="FF3-jJ-mDB"/>
+                    <include reference="K00-7m-O2B"/>
+                    <include reference="uZi-bc-fvC"/>
+                    <include reference="NrY-XX-FMg"/>
+                    <include reference="lVi-CD-6gv"/>
+                    <include reference="vfs-hy-eLc"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

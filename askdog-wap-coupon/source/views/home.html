@@ -1,0 +1,49 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/HomeController','style/css/pages/store-list.css']">
+        <div class="home-container" ng-controller="HomeController">
+            <div class="business">
+                <div class="business-contain">
+                    <div class="business-item clearfix" ng-repeat="item in viewList.result"
+                         ng-if="viewList.result.length > 0 ">
+                        <home-coupon coupon="item"></home-coupon>
+                        <a ui-sref="layout.view.store({'id':item.id})"><img
+                                ng-src="{{item.cover_image | picTrans: '420w_191h_1e_1c.png'}}" alt=""
+                                class="store-thumbnail"></a>
+                        <div class="store-name-detail">
+                            <div class="store-name">{{item.name}}</div>
+                            <i class="iconfont icon-feature">
+                                <div class="store-feature">{{item.type}}</div>
+                            </i>
+                            <i class="iconfont icon-money">
+                                <div class="store-money">{{item.cpc}}</div>
+                            </i>
+                        </div>
+                        <!--<div class="receive-coupon">领取&nbsp￥20优惠券</div>-->
+                        <a class="pull-right" ui-sref="layout.view.store({'id':item.id})"
+                           ng-if="item.coupons.length > 0">
+                            <div class="receive-coupon">领取&nbsp;￥{{item.coupon_normal + item.coupon_forwarded}}优惠券</div>
+                        </a>
+                    </div>
+                    <!--<div class="caption">-->
+                    <!--<div class="store-name">{{item.name}}</div>-->
+                    <!--</div>-->
+                    <div class="store-empty" ng-if="viewList.total==0 || viewList.result.length == 0 ">
+                        <div class="empty-font">
+                            <i class="iconfont icon-wenjianjia"></i>
+                        </div>
+                        暂时没有商家信息
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-link btn-load" ng-hide="loadingCompleted">
+                            <img src="style/images/loading-fail.gif" alt="" class="loading"/>
+                            正在加载
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <ad-analytics></ad-analytics>
+        </div>
+    </div>
+</div>

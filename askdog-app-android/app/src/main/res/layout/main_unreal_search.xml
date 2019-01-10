@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/unreal_search_header"
+    android:layout_height="@dimen/navi_header_height">
+
+    <LinearLayout
+        android:id="@+id/main_unreal_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/common_margin5"
+        android:layout_toLeftOf="@+id/message_area"
+        android:background="@drawable/input_box"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/common_margin10"
+            android:src="@drawable/header_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin10"
+            android:singleLine="true"
+            android:text="@string/search_hint"
+            android:textSize="@dimen/common_textsize_type16" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/message_area"
+        android:layout_width="@dimen/common_margin50"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/main_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="登录"
+            android:textSize="@dimen/common_textsize_type16" />
+
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/main_remind_message"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_remind"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/main_title_notify_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:background="@drawable/unread_count_bg"
+                android:gravity="center"
+                android:text="88"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </FrameLayout>
+</RelativeLayout>

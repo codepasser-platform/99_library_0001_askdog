@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.askdog.android.activity.PersonalChannelActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_image_height"
+                android:gravity="center"
+                android:background="@drawable/ic_header_bg"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="@dimen/common_avatar_b_size"
+                    android:layout_height="@dimen/common_avatar_b_size"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/common_margin10">
+
+                    <ImageView
+                        android:id="@+id/personal_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/me_avatar" />
+
+                    <ImageView
+                        android:id="@+id/me_vip"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/vip" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/personal_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:textColor="@color/snow"
+                    android:textSize="@dimen/common_textsize_type16" />
+
+                <TextView
+                    android:id="@+id/personal_signature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/common_margin30"
+                    android:paddingRight="@dimen/common_margin30"
+                    android:singleLine="true"
+                    android:textColor="@color/snow"
+                    android:textSize="@dimen/common_textsize_type14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/personal_owned_channel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_selector"
+                    android:textSize="@dimen/common_textsize_type16" />
+
+                <TextView
+                    android:id="@+id/personal_subscribed_channel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_selector"
+                    android:textSize="@dimen/common_textsize_type16" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/personal_channel_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

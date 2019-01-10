@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.askdog.android.activity.EditProfileFillActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/edit_profile_fill_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/common_textsize_type18" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/common_margin10"
+            android:background="@drawable/white_bg_radius"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_profile_fill_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:padding="@dimen/common_margin10"
+                android:textSize="@dimen/common_textsize_type16"
+                android:layout_marginRight="45dp"/>
+
+            <ImageView
+                android:id="@+id/edit_profile_fill_delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="@dimen/common_margin10"
+                android:src="@drawable/search_clear_pressed" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/edit_profile_fill_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/common_margin20"
+        android:background="@drawable/blue_bg_btn"
+        android:paddingBottom="@dimen/common_margin5"
+        android:paddingLeft="@dimen/common_margin20"
+        android:paddingRight="@dimen/common_margin20"
+        android:paddingTop="@dimen/common_margin5"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common_textsize_type18" />
+</LinearLayout>

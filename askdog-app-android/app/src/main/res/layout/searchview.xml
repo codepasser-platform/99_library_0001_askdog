@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:background="@color/white"
+    android:layout_height="@dimen/common_margin50">
+    <TextView
+        android:id="@+id/search_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/common_margin10"
+        android:paddingRight="@dimen/common_margin10"
+        android:textSize="@dimen/common_textsize_type16"
+        android:textColor="@color/slate"
+        android:gravity="center"
+        android:text="取消" />
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin10"
+        android:layout_toLeftOf="@+id/search_cancel_btn"
+        android:background="@color/snow"
+        android:imeOptions="actionGo" />
+</RelativeLayout>

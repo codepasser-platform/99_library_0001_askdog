@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/detail_share_item_height"
+    android:paddingBottom="@dimen/common_margin10"
+    android:paddingTop="@dimen/common_margin10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/share_content_pic"
+            android:layout_width="@dimen/detail_share_item_image_width"
+            android:layout_height="@dimen/detail_share_item_image_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/common_margin10" />
+
+        <RelativeLayout
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_share_item_image_height"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/share_content_pic">
+
+            <TextView
+                android:id="@+id/share_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:maxHeight="@dimen/common_margin40"
+                android:maxLines="2"
+                android:padding="@dimen/common_margin3"
+                android:text="自由派是自由主义者吗？翻译略有差，意义大不同"
+                android:textColor="@color/extra_dark_blue"
+                android:textSize="@dimen/common_textsize_type18" />
+
+            <LinearLayout
+                android:id="@+id/share_bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_margin3">
+
+                <TextView
+                    android:id="@+id/share_creation_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016年8月6日"
+                    android:textColor="@color/sliver"
+                    android:textSize="@dimen/common_textsize_type8" />
+
+                <TextView
+                    android:id="@+id/share_view_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin10"
+                    android:text="浏览数1234567"
+                    android:textColor="@color/sliver"
+                    android:textSize="@dimen/common_textsize_type8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/common_margin15"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_margin3">
+
+                <TextView
+                    android:id="@+id/share_author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="superman"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type12" />
+
+                <TextView
+                    android:id="@+id/share_channel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin10"
+                    android:singleLine="true"
+                    android:text="天上人间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type12" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

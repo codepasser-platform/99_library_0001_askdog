@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "askdog.base-url",
+      "type": "java.lang.String",
+      "description": "Server base url."
+    },
+    {
+      "name": "askdog.password.recover-url",
+      "type": "java.lang.String",
+      "description": "Password recover url which will be send to user's mail address."
+    },
+    {
+      "name": "askdog.password.token-timeout",
+      "type": "java.lang.String",
+      "description": "Expiration of password recover token."
+    },
+    {
+      "name": "askdog.password.token-timeout-unit",
+      "type": "java.lang.String",
+      "description": "Expiration unit of password recover token.."
+    },
+    {
+      "name": "askdog.password.mail-user-name",
+      "type": "java.lang.String",
+      "description": "SMTP server account for send password recover mail."
+    },
+    {
+      "name": "askdog.password.mail-password",
+      "type": "java.lang.String",
+      "description": "Password of SMTP account."
+    }
+  ]
+}

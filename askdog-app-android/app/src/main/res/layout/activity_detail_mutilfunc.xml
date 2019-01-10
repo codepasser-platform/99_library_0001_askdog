@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ExperiencesDetailActivity">
+
+    <RelativeLayout android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_header_height"
+        android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/detail_navi_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin3"
+            android:padding="@dimen/common_margin10"
+            android:src="@drawable/ic_disclosure_indicator"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+        <TextView android:id="@+id/detail_navi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/common_textsize_type20"
+            android:textColor="@color/steel"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        >
+
+    </RelativeLayout>
+</RelativeLayout>

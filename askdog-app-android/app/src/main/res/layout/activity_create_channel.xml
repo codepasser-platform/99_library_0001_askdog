@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.askdog.android.activity.CreateChannelActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/channel_upload_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/common_margin3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_margin20"
+                android:text="编辑频道图片"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_textsize_type22" />
+
+            <ImageView android:id="@+id/channel_upload_thumbnail"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_margin10"
+                android:padding="@dimen/common_margin3"
+                android:src="@drawable/channel_default_diagram" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin3">
+        <EditText android:id="@+id/create_channel_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin20"
+            android:textColor="@color/black"
+            android:hint="请输入频道名称"
+            android:background="@null"
+            android:textSize="@dimen/common_textsize_type20"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_margin="@dimen/common_margin3">
+        <EditText android:id="@+id/create_channel_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_margin20"
+            android:textColor="@color/black"
+            android:background="@null"
+            android:hint="请输入频道描述"
+            android:textSize="@dimen/common_textsize_type18"/>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

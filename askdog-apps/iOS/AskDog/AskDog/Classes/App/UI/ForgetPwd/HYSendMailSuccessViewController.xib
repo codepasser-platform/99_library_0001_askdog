@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYSendMailSuccessViewController" customModule="AskDog" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-4M-fLU">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="FHg-6a-IN5"/>
+                        <constraint firstAttribute="width" constant="85" id="WFp-Yt-vEW"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="FHg-6a-IN5"/>
+                            <exclude reference="WFp-Yt-vEW"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="FHg-6a-IN5"/>
+                            <include reference="WFp-Yt-vEW"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮件发送成功！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vB-Ze-qlc">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="0ru-Tc-gqN"/>
+                        <constraint firstAttribute="height" constant="29" id="Ijq-K5-wF1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0ru-Tc-gqN"/>
+                            <exclude reference="Ijq-K5-wF1"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0ru-Tc-gqN"/>
+                            <include reference="Ijq-K5-wF1"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重置密码邮件已发送到您的邮箱,请前往邮箱完成找回密码！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM1-w8-Bu6">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="315" id="VwD-IR-oM9"/>
+                        <constraint firstAttribute="height" constant="29" id="y4c-Bh-Tej">
+                            <variation key="heightClass=regular-widthClass=compact" constant="58"/>
+                        </constraint>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VwD-IR-oM9"/>
+                            <exclude reference="y4c-Bh-Tej"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="VwD-IR-oM9"/>
+                            <include reference="y4c-Bh-Tej"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qz1-ad-w2v">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XJ8-qg-kdx"/>
+                        <constraint firstAttribute="width" constant="77" id="rEs-B0-bq0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="马上登录">
+                        <color key="titleColor" red="0.0" green="0.66666666669999997" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="XJ8-qg-kdx"/>
+                            <exclude reference="rEs-B0-bq0"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="XJ8-qg-kdx"/>
+                            <include reference="rEs-B0-bq0"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="btnLoginRightNowClicked:" destination="-1" eventType="touchUpInside" id="o2w-vL-Ori"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5vB-Ze-qlc" firstAttribute="top" secondItem="a3z-4M-fLU" secondAttribute="bottom" constant="28" id="0ls-54-kEh"/>
+                <constraint firstItem="OM1-w8-Bu6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D64-dh-2CT"/>
+                <constraint firstItem="5vB-Ze-qlc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LbT-oX-03Z"/>
+                <constraint firstItem="OM1-w8-Bu6" firstAttribute="top" secondItem="5vB-Ze-qlc" secondAttribute="bottom" constant="9" id="WPk-ic-6Oe"/>
+                <constraint firstItem="a3z-4M-fLU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aap-G6-fa6"/>
+                <constraint firstItem="Qz1-ad-w2v" firstAttribute="top" secondItem="OM1-w8-Bu6" secondAttribute="bottom" constant="20" id="fN7-aZ-djM"/>
+                <constraint firstItem="Qz1-ad-w2v" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mi3-Z2-pBA"/>
+                <constraint firstItem="a3z-4M-fLU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="160" id="x7s-Lz-j9p"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="a3z-4M-fLU"/>
+                    <exclude reference="5vB-Ze-qlc"/>
+                    <exclude reference="OM1-w8-Bu6"/>
+                    <exclude reference="Qz1-ad-w2v"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="fN7-aZ-djM"/>
+                    <exclude reference="mi3-Z2-pBA"/>
+                    <exclude reference="0ls-54-kEh"/>
+                    <exclude reference="LbT-oX-03Z"/>
+                    <exclude reference="D64-dh-2CT"/>
+                    <exclude reference="WPk-ic-6Oe"/>
+                    <exclude reference="aap-G6-fa6"/>
+                    <exclude reference="x7s-Lz-j9p"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="a3z-4M-fLU"/>
+                    <include reference="5vB-Ze-qlc"/>
+                    <include reference="OM1-w8-Bu6"/>
+                    <include reference="Qz1-ad-w2v"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="fN7-aZ-djM"/>
+                    <include reference="mi3-Z2-pBA"/>
+                    <include reference="0ls-54-kEh"/>
+                    <include reference="LbT-oX-03Z"/>
+                    <include reference="D64-dh-2CT"/>
+                    <include reference="WPk-ic-6Oe"/>
+                    <include reference="aap-G6-fa6"/>
+                    <include reference="x7s-Lz-j9p"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="100" height="100"/>
+    </resources>
+</document>

@@ -1,0 +1,18 @@
+<div class="fragment-container">
+    <div class="footer-container">
+        <a ng-class="{active: $state.includes('layout.view.index')}"
+           class="follow-coupon footer-link"
+           ui-sref="layout.view.index" style="width:50%;background:none;display:block;float: left;"
+           ui-sref-active="active">
+            <div class="home-page" style="font-size:14px;text-align:center;border-right: 1px solid #fff;">首页</div>
+            <!--<div style="height:28px;width:1px;background: #fff;float:left;margin-left:40%;margin-top:7.5px;opacity: 0.8"></div>-->
+        </a>
+        <a ng-class="{active: ($state.includes('layout.view.cash') || $state.includes('layout.view.cash-detail'))}"
+           id="a-my-coupons"
+           class=" follow-coupon footer-link"
+           ui-sref="layout.view.cash"
+           style="width:50%;background: none;display:block;float: left;">
+            <div class="my-coupon" style="font-size:14px;text-align: center;">优惠券</div>
+        </a>
+    </div>
+</div>

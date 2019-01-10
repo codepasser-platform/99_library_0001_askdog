@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYAboutViewController" customModule="AskDog" customModuleProvider="target">
+            <connections>
+                <outlet property="lblVersion" destination="mS8-CL-Fym" id="slD-YP-Chd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-yR-YvF">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="079-wN-ivj"/>
+                        <constraint firstAttribute="width" constant="80" id="MlV-Qa-0m4"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="079-wN-ivj"/>
+                            <exclude reference="MlV-Qa-0m4"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="079-wN-ivj"/>
+                            <include reference="MlV-Qa-0m4"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号:1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS8-CL-Fym">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="204" id="FWs-5N-UPJ"/>
+                        <constraint firstAttribute="height" constant="21" id="H91-eA-6C5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="FWs-5N-UPJ"/>
+                            <exclude reference="H91-eA-6C5"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="FWs-5N-UPJ"/>
+                            <include reference="H91-eA-6C5"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="官方网站：askdog.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zk5-uC-OwS">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Hc1-9Y-FEL"/>
+                        <constraint firstAttribute="width" constant="330" id="QmR-mo-KLp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Hc1-9Y-FEL"/>
+                            <exclude reference="QmR-mo-KLp"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Hc1-9Y-FEL"/>
+                            <include reference="QmR-mo-KLp"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 大连鸿影软件科技有限公司" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUl-Cn-Th3">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="abu-GK-NDu"/>
+                        <constraint firstAttribute="width" constant="330" id="vHy-c4-PqJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="abu-GK-NDu"/>
+                            <exclude reference="vHy-c4-PqJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="abu-GK-NDu"/>
+                            <include reference="vHy-c4-PqJ"/>
+                        </mask>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XM-6J-TRo">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XPM-Qf-P5s"/>
+                        <constraint firstAttribute="width" constant="317" id="d7v-uD-5XS"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="XPM-Qf-P5s"/>
+                            <exclude reference="d7v-uD-5XS"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="XPM-Qf-P5s"/>
+                            <include reference="d7v-uD-5XS"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="btnGotoWebPageClicked:" destination="-1" eventType="touchUpInside" id="rRK-MY-mrr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3XM-6J-TRo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Qd-OJ-VxL"/>
+                <constraint firstItem="gZg-yR-YvF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AUP-k6-s3p"/>
+                <constraint firstItem="cUl-Cn-Th3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JQe-Rz-WZL"/>
+                <constraint firstItem="cUl-Cn-Th3" firstAttribute="top" secondItem="zk5-uC-OwS" secondAttribute="bottom" constant="3" id="LXe-wb-kGS"/>
+                <constraint firstItem="mS8-CL-Fym" firstAttribute="top" secondItem="gZg-yR-YvF" secondAttribute="bottom" constant="23" id="MOi-9M-fch"/>
+                <constraint firstItem="mS8-CL-Fym" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RhP-74-rlS"/>
+                <constraint firstAttribute="bottom" secondItem="3XM-6J-TRo" secondAttribute="bottom" constant="49" id="TQR-Ne-9ZU"/>
+                <constraint firstItem="gZg-yR-YvF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="137" id="mjC-27-hIb"/>
+                <constraint firstAttribute="bottom" secondItem="cUl-Cn-Th3" secondAttribute="bottom" constant="30" id="qYa-6A-VLK"/>
+                <constraint firstItem="zk5-uC-OwS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tZM-3Q-mjU"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="gZg-yR-YvF"/>
+                    <exclude reference="mS8-CL-Fym"/>
+                    <exclude reference="zk5-uC-OwS"/>
+                    <exclude reference="cUl-Cn-Th3"/>
+                    <exclude reference="3XM-6J-TRo"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="2Qd-OJ-VxL"/>
+                    <exclude reference="TQR-Ne-9ZU"/>
+                    <exclude reference="JQe-Rz-WZL"/>
+                    <exclude reference="LXe-wb-kGS"/>
+                    <exclude reference="qYa-6A-VLK"/>
+                    <exclude reference="MOi-9M-fch"/>
+                    <exclude reference="RhP-74-rlS"/>
+                    <exclude reference="tZM-3Q-mjU"/>
+                    <exclude reference="AUP-k6-s3p"/>
+                    <exclude reference="mjC-27-hIb"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="gZg-yR-YvF"/>
+                    <include reference="mS8-CL-Fym"/>
+                    <include reference="zk5-uC-OwS"/>
+                    <include reference="cUl-Cn-Th3"/>
+                    <include reference="3XM-6J-TRo"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="2Qd-OJ-VxL"/>
+                    <include reference="TQR-Ne-9ZU"/>
+                    <include reference="JQe-Rz-WZL"/>
+                    <include reference="LXe-wb-kGS"/>
+                    <include reference="qYa-6A-VLK"/>
+                    <include reference="MOi-9M-fch"/>
+                    <include reference="RhP-74-rlS"/>
+                    <include reference="tZM-3Q-mjU"/>
+                    <include reference="AUP-k6-s3p"/>
+                    <include reference="mjC-27-hIb"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="100" height="100"/>
+    </resources>
+</document>

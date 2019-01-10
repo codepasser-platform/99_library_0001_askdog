@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="HYMyChannelListTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRq-7W-wor">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channelDefault" translatesAutoresizingMaskIntoConstraints="NO" id="VhD-px-rxA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="V8V-HI-7K6"/>
+                                    <constraint firstAttribute="height" constant="60" id="bh7-Yc-wh5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lisa Riley的频道" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lj9-yq-k5y">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mqL-Qj-iIW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.1960784314" green="0.3411764706" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订阅数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edV-jH-bTh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="uJi-MW-1Cz"/>
+                                    <constraint firstAttribute="width" constant="40" id="wln-Nn-A68"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="186" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aN-fG-lwm">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="g20-ks-c1n"/>
+                                    <constraint firstAttribute="height" constant="21" id="pi2-Dc-Ro4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3P-zD-DL6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="2Ef-QC-b0T"/>
+                                    <constraint firstAttribute="width" constant="56" id="nCt-dp-X7U"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="31" minY="16" maxX="8" maxY="15"/>
+                                <state key="normal" image="PullDownMenu"/>
+                                <connections>
+                                    <action selector="btnMenuClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9s7-3m-jRA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="edV-jH-bTh" firstAttribute="top" secondItem="lj9-yq-k5y" secondAttribute="bottom" constant="3" id="5Ou-if-c2O"/>
+                            <constraint firstAttribute="trailing" secondItem="lj9-yq-k5y" secondAttribute="trailing" constant="22" id="AoS-3L-jdC"/>
+                            <constraint firstItem="1aN-fG-lwm" firstAttribute="top" secondItem="lj9-yq-k5y" secondAttribute="bottom" constant="3" id="ERM-Gw-Qch"/>
+                            <constraint firstItem="1aN-fG-lwm" firstAttribute="leading" secondItem="edV-jH-bTh" secondAttribute="trailing" id="Id5-ki-i0o"/>
+                            <constraint firstItem="VhD-px-rxA" firstAttribute="centerY" secondItem="cRq-7W-wor" secondAttribute="centerY" id="XuJ-bs-T8r"/>
+                            <constraint firstItem="lj9-yq-k5y" firstAttribute="leading" secondItem="VhD-px-rxA" secondAttribute="trailing" constant="10" id="aLJ-Yu-uwg"/>
+                            <constraint firstItem="VhD-px-rxA" firstAttribute="leading" secondItem="cRq-7W-wor" secondAttribute="leading" constant="12" id="bZ8-rk-qUb"/>
+                            <constraint firstItem="edV-jH-bTh" firstAttribute="leading" secondItem="VhD-px-rxA" secondAttribute="trailing" constant="12" id="s60-iG-oZi"/>
+                            <constraint firstItem="S3P-zD-DL6" firstAttribute="top" secondItem="cRq-7W-wor" secondAttribute="top" constant="35" id="syE-3C-QNZ"/>
+                            <constraint firstItem="lj9-yq-k5y" firstAttribute="top" secondItem="cRq-7W-wor" secondAttribute="top" constant="16" id="thY-me-fbE"/>
+                            <constraint firstAttribute="trailing" secondItem="S3P-zD-DL6" secondAttribute="trailing" constant="4" id="zur-iF-ceL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="cRq-7W-wor" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="1cy-8m-cnZ"/>
+                    <constraint firstItem="cRq-7W-wor" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="VS9-kU-wYT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cRq-7W-wor" secondAttribute="bottom" constant="-6" id="gF4-QC-Sy6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cRq-7W-wor" secondAttribute="trailing" constant="-8" id="tzj-y4-UIB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bkView" destination="cRq-7W-wor" id="4Tv-Ch-3gg"/>
+                <outlet property="iconView" destination="VhD-px-rxA" id="ONQ-hW-VbR"/>
+                <outlet property="lblChannelTitle" destination="lj9-yq-k5y" id="Wci-xp-QeZ"/>
+                <outlet property="lblDingyueNumber" destination="1aN-fG-lwm" id="9Y7-EG-8Kj"/>
+            </connections>
+            <point key="canvasLocation" x="498" y="400"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="PullDownMenu" width="56" height="16"/>
+        <image name="channelDefault" width="280" height="280"/>
+    </resources>
+</document>

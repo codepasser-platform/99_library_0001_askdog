@@ -1,0 +1,62 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/StoreManagementController']">
+        <div class="row" ng-controller="StoreManagementController">
+            <div class="main a-fadeinR">
+                <h1 class="page-header">商户管理</h1>
+                <div>
+                    <button type="button" class="btn btn-default btn-primary" ng-click="addStore()">添加商户</button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul class="stores list">
+                            <li class="item" ng-repeat="item in viewData.result">
+                                <div class="pull-left">
+                                    <div class="thumbnail pic-wrap">
+                                        <img ng-src="{{item.cover_image}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="row information">
+                                    <div class="col-md-12 col-sm-12 hidden-xs basic">
+                                        <h3>{{item.name}}</h3>
+                                        <ul class="attributes">
+                                            <li><span class="glyphicon glyphicon-map-marker"></span>{{item.address}}
+                                            </li>
+                                            <li><span class="glyphicon glyphicon-earphone"></span>{{item.contacts_user_detail.phone}}</li>
+                                            <li><span class="glyphicon glyphicon-user"></span>{{item.contacts_user_detail.name}}</li>
+                                        </ul>
+                                        <div class="panel-footer">
+                                            更新日期：{{item.creation_time | date:"yyyy/MM/dd"}}
+                                            <div class="glyphicon pull-right glyphicon-qrcode">
+                                                <div class="qrcode thumbnail">
+                                                    <qr-code width="170" height="170"
+                                                             text="/#/store/{{item.id}}"></qr-code>
+                                                </div>
+                                            </div>
+                                            <div class="glyphicon pull-right ">
+                                                <button class="btn store-manager-btn" ng-click="deleteStore(item.id)">
+                                                    删除
+                                                </button>
+                                            </div>
+                                            <div class="glyphicon pull-right ">
+                                                <button class="btn store-manager-btn" ng-click="updateStore(item.id)">
+                                                    修改
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hidden-md hidden-sm hidden-xs description">
+                                    <p>{{item.description}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <pagination paging-data="viewData" size="4" total="{{viewData.total}}"></pagination>
+
+            </div>
+        </div>
+
+    </div>
+</div>

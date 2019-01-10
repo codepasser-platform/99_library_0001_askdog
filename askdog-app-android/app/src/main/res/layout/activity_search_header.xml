@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navi_header_height">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/search_cancel"
+        android:padding="@dimen/common_margin5">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/common_margin10"
+            android:background="@drawable/input_box"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:imeActionId="@+id/search_input_actionid"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="35dp"
+            android:paddingRight="@dimen/common_margin10"
+            android:singleLine="true"
+            android:textSize="@dimen/common_textsize_type16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/search_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/common_margin10"
+                android:src="@drawable/header_search" />
+
+            <ImageView
+                android:id="@+id/search_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/common_margin20"
+                android:src="@drawable/header_search_delete"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/search_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/common_margin10"
+        android:gravity="center"
+        android:text="取消" />
+</RelativeLayout>

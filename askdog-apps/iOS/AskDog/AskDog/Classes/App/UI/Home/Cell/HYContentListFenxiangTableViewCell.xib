@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="HYContentListFenxiangTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xts-Z3-dD9">
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo1" translatesAutoresizingMaskIntoConstraints="NO" id="tLY-Kg-lpg">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tLY-Kg-lpg" secondAttribute="height" multiplier="119:67" id="oLC-e8-0nN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-E3-JMN">
+                                <color key="backgroundColor" red="0.72856436609999997" green="1" blue="0.2104792379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Sbc-Qo-4th"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7小时前 浏览数 1932" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-9r-7d7">
+                                <color key="backgroundColor" red="0.75550071350000003" green="0.51838167479999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="R8i-Bv-UNE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为什么咪蒙，papi酱，同道大叔这些自媒体能逆袭火爆？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-7d-dNs">
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="vhu-W8-U2T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40356033120000001" blue="0.54474363530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wsd-9r-7d7" secondAttribute="trailing" constant="8" id="BIK-BS-rKp"/>
+                            <constraint firstItem="BLo-E3-JMN" firstAttribute="top" secondItem="Mkq-7d-dNs" secondAttribute="bottom" constant="2" id="OHI-9m-1bz"/>
+                            <constraint firstItem="Mkq-7d-dNs" firstAttribute="leading" secondItem="tLY-Kg-lpg" secondAttribute="trailing" constant="8" id="PEU-S9-00Z"/>
+                            <constraint firstItem="Mkq-7d-dNs" firstAttribute="top" secondItem="Xts-Z3-dD9" secondAttribute="top" constant="3" id="QoD-gD-V44"/>
+                            <constraint firstItem="Wsd-9r-7d7" firstAttribute="top" secondItem="BLo-E3-JMN" secondAttribute="bottom" constant="1" id="fKx-gK-qOS"/>
+                            <constraint firstAttribute="bottom" secondItem="tLY-Kg-lpg" secondAttribute="bottom" constant="7" id="g7X-Uj-oZc"/>
+                            <constraint firstAttribute="trailing" secondItem="Mkq-7d-dNs" secondAttribute="trailing" constant="8" id="g7j-Sp-T0N"/>
+                            <constraint firstItem="BLo-E3-JMN" firstAttribute="leading" secondItem="tLY-Kg-lpg" secondAttribute="trailing" constant="8" id="oEn-yl-AVA"/>
+                            <constraint firstAttribute="trailing" secondItem="BLo-E3-JMN" secondAttribute="trailing" constant="8" id="pGa-yn-Sgv"/>
+                            <constraint firstItem="tLY-Kg-lpg" firstAttribute="top" secondItem="Xts-Z3-dD9" secondAttribute="top" constant="8" id="rnZ-nB-o8Z"/>
+                            <constraint firstItem="Wsd-9r-7d7" firstAttribute="leading" secondItem="tLY-Kg-lpg" secondAttribute="trailing" constant="8" id="uO4-bX-YCu"/>
+                            <constraint firstItem="tLY-Kg-lpg" firstAttribute="leading" secondItem="Xts-Z3-dD9" secondAttribute="leading" constant="10" id="yVf-Yn-NIh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Xts-Z3-dD9" secondAttribute="bottom" constant="-8" id="SNp-CE-mrq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xts-Z3-dD9" secondAttribute="trailing" constant="-8" id="exj-y1-KUm"/>
+                    <constraint firstItem="Xts-Z3-dD9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="phb-59-Yeb"/>
+                    <constraint firstItem="Xts-Z3-dD9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="rRc-V6-kUi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bkView" destination="Xts-Z3-dD9" id="ntG-S2-hlT"/>
+                <outlet property="imgV" destination="tLY-Kg-lpg" id="mEG-xE-4eS"/>
+                <outlet property="lblChannelName" destination="BLo-E3-JMN" id="hbA-av-tJI"/>
+                <outlet property="lblContentTitle" destination="Mkq-7d-dNs" id="83d-8O-Mke"/>
+                <outlet property="lblViewInfo" destination="Wsd-9r-7d7" id="7dP-0h-dYk"/>
+            </connections>
+            <point key="canvasLocation" x="502" y="373"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="demo1" width="421" height="175"/>
+    </resources>
+</document>

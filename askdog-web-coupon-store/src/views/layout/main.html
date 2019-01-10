@@ -1,0 +1,67 @@
+<div>
+
+    <div ng-include="'views/common/header.html'"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar a-fadein" ng-if="userinfo">
+                <ul class="nav nav-sidebar user">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="user avatar dropdown-toggle text-center"
+                           data-toggle="dropdown">
+                            <img ng-src="{{userinfo.avatar || 'http://pinegrow.com/placeholders/img4.jpg'}}"
+                                 class="img-circle" style="width:60px">
+                        </a>
+                        <ul class="user entry dropdown-menu" role="menu">
+                            <li>
+                                <a href="javascript:void(0);">{{userinfo.name}}</a>
+                            </li>
+                            <li class="user entry menu text-center">
+                                <button class="btn btn-danger" ng-click="signOut()">退出</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav nav-sidebar" ng-if="hasAnyRole(['ADMIN', 'AGENT_ADMIN', 'AGENT_EMPLOYEE'])">
+                    <li ui-sref-active="active"><a ui-sref="admin.store()">商户管理</a></li>
+                    <li ui-sref-active="active"><a ui-sref="admin.dashboard()">商户数据</a></li>
+                </ul>
+
+                <ul class="nav nav-sidebar" ng-if="hasAnyRole(['ADMIN'])">
+                    <input type="text" name="storeID" ng-model="storeID" placeholder="输入商户ID">
+                    <li ui-sref-active="active" ng-show="storeID">
+                        <a ui-sref="store.verify({'storeId': storeID})">优惠券核销</a>
+                    </li>
+                    <li ui-sref-active="active" ng-show="storeID">
+                        <a ui-sref="store.dashboard({'storeId': storeID})">优惠券使用状况</a>
+                    </li>
+                    <li ui-sref-active="active" ng-show="storeID">
+                        <a ui-sref="store.product({'storeId': storeID})">商品管理</a>
+                    </li>
+                    <li ui-sref-active="active" ng-show="storeID">
+                        <a ui-sref="store.coupon({'storeId': storeID})">优惠券管理</a>
+                    </li>
+                </ul>
+
+                <ul class="nav nav-sidebar" ng-if="hasAnyRole(['STORE_ADMIN', 'STORE_EMPLOYEE'])">
+                    <li ui-sref-active="active">
+                        <a ui-sref="store.verify({'storeId': userinfo.store_ids[0]})">优惠券核销</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="store.dashboard({'storeId': userinfo.store_ids[0]})">优惠券使用状况</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="store.product({'storeId': userinfo.store_ids[0]})">商品管理</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="store.coupon({'storeId': userinfo.store_ids[0]})">优惠券管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content" style="overflow-x: hidden" ui-view>
+                <div>模块加载中...</div>
+            </div>
+        </div>
+    </div>
+
+</div>

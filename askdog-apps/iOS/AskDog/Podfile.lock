@@ -1,0 +1,71 @@
+PODS:
+  - Alamofire (4.0.0)
+  - IQKeyboardManager (3.3.7)
+  - MJRefresh (2.4.12)
+  - NVActivityIndicatorView (2.12)
+  - ReachabilitySwift (3)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (3.0.0)
+  - SVProgressHUD (2.0.3)
+  - UITableView+FDTemplateLayoutCell (1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - IQKeyboardManager (~> 3.3.0)
+  - MJRefresh (~> 2.4.7)
+  - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`, branch `master`)
+  - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift.git`, branch `master`)
+  - SDWebImage (from `https://github.com/rs/SDWebImage.git`, branch `master`)
+  - SnapKit (from `https://github.com/SnapKit/SnapKit.git`, branch `master`)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - UITableView+FDTemplateLayoutCell (~> 1.3)
+
+EXTERNAL SOURCES:
+  NVActivityIndicatorView:
+    :branch: master
+    :git: https://github.com/ninjaprox/NVActivityIndicatorView.git
+  ReachabilitySwift:
+    :branch: master
+    :git: https://github.com/ashleymills/Reachability.swift.git
+  SDWebImage:
+    :branch: master
+    :git: https://github.com/rs/SDWebImage.git
+  SnapKit:
+    :branch: master
+    :git: https://github.com/SnapKit/SnapKit.git
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  NVActivityIndicatorView:
+    :commit: 748e785ed08c1a30f674a7da2ca3ba342b121287
+    :git: https://github.com/ninjaprox/NVActivityIndicatorView.git
+  ReachabilitySwift:
+    :commit: 610027bd13fe1b832eea98025658ead5ddf112ae
+    :git: https://github.com/ashleymills/Reachability.swift.git
+  SDWebImage:
+    :commit: 42a5e6f6ec513e57987ea9544ac8a969cf586c3c
+    :git: https://github.com/rs/SDWebImage.git
+  SnapKit:
+    :commit: 5c7ede844a7e190de05a1b14311c378358ea61c0
+    :git: https://github.com/SnapKit/SnapKit.git
+  SVProgressHUD:
+    :commit: cc5f7d68fe76afdb79e215b8ff00133575fafacc
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
+  NVActivityIndicatorView: de8be03826726ad99cdfacf7fe09e88cbfeef911
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 98af0a4e9369d3c58f758967518081dbdc7eb1d9
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+
+PODFILE CHECKSUM: 6ad5204e6e05cbde0ace7ec66ad09263faa0b5d9
+
+COCOAPODS: 1.1.0.rc.2

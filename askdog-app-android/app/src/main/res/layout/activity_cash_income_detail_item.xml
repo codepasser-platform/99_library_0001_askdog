@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="@dimen/common_margin5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cash_income_experience_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin5"
+
+            android:lines="2"
+            android:text="Android OkHttp文件上传Android OkHttp文件上传Android OkHttp文件上传Android OkHttp文件上传"
+            android:textSize="@dimen/common_textsize_type18" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin5">
+
+            <TextView
+                android:id="@+id/cash_income_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:text="2016.8.24 10:53"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_textsize_type14" />
+
+            <TextView
+                android:id="@+id/cash_income_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:text="+50.00"
+                android:textColor="@color/blue"
+                android:layout_marginRight="@dimen/common_margin5"
+                android:textSize="@dimen/common_textsize_type14" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

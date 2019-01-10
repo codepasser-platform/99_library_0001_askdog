@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.askdog.android.activity.setting.AboutAskdogActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+    <ImageView
+        android:id="@+id/about_askdog_logo"
+        android:layout_width="@dimen/about_logo_size"
+        android:layout_height="@dimen/about_logo_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/about_logo_size"
+        android:src="@mipmap/ic_title" />
+
+
+    <TextView android:id="@+id/about_askdog_version"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_askdog_logo"
+        android:layout_marginTop="@dimen/common_margin10"
+        android:gravity="center_horizontal"
+        android:text="版本号2.0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_textsize_type18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_margin50"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="官方网站:askdog.com"
+            android:textColor="@color/steel"
+            android:textSize="@dimen/common_textsize_type12" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10"
+            android:gravity="center_horizontal"
+            android:text="@string/ask_dog_copyright"
+            android:textColor="@color/steel"
+            android:textSize="@dimen/common_textsize_type14" />
+
+    </LinearLayout>
+</RelativeLayout>

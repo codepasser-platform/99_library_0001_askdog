@@ -1,0 +1,52 @@
+.layout-container {
+  // Default
+  &.layout-default {
+    .layout-header {
+      height: $header-height;
+    }
+    .layout-main {
+      .layout-sidebar {
+        float: left;
+        overflow-y: visible;
+        background: $dark;
+        color: $gray-300;
+        &.sidebar-container {
+          position: relative;
+          width: $sidebar-width;
+          height: calc(100vh - #{$header-height});
+        }
+      }
+      .layout-body {
+        float: left;
+        overflow-y: hidden;
+        &.body-container {
+          position: relative;
+          padding-top: 1rem;
+          width: calc(100% - #{$sidebar-width});
+          height: calc(100vh - #{$header-height});
+        }
+      }
+    }
+  }
+
+  // Screen
+  &.layout-screen {
+    .layout-header {
+      height: $header-height;
+    }
+    .layout-main {
+      .layout-body {
+        overflow-y: hidden;
+        &.body-container {
+          position: relative;
+          min-height: calc(100vh - #{$header-height} - #{$footer-height});
+        }
+      }
+    }
+    .layout-footer {
+      height: $footer-height;
+      background: $light;
+      border: 1px solid $gray-300;
+    }
+  }
+}

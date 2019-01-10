@@ -1,0 +1,35 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/CashDetailController','style/css/pages/cash-detail.css','style/css/pages/store-list.css']">
+        <div class="cash-detail-container" ng-controller="CashDetailController">
+            <div class="panel panel-default coupon-detail-item">
+                <div class="panel-head"
+                     ng-class="{true:'panel-head-upgraud',false:'panel-head-normal'}[cashDetail.coupon_state == 'USED']">
+                </div>
+                <div class="panel-body">
+                    <div class="clearfix store-header">
+                        <div class="store-name pull-left">
+                            {{cashDetail.store_basic.name}}
+                        </div>
+                        <div class="row pull-right" ng-if="cashDetail.coupon_state == 'NOT_USED'"
+                             ng-class="{true:'',false:'store-coupon-use'}[cashDetail.coupon_state == 'USED']">未使用
+                        </div>
+                        <div class="row pull-right" ng-if="cashDetail.coupon_state == 'USED'">已使用
+                        </div>
+                    </div>
+                    <div class="row coupon-no">
+                        编号：<span class="coupon-detail-code">{{cashDetail.id}}</span>
+                    </div>
+                    <div class="row" >
+                        金额：{{cashDetail.rule}} 元
+                    </div>
+                    <div class="row cash-detail-phone">电话：{{cashDetail.store_basic.phone}}</div>
+                    <div class="cash-detail-address">
+                        <div class="pull-left coupon-detail-address">地址：</div>
+                        <span style="display:table;">{{cashDetail.store_basic.address}}</span>
+                    </div>
+                </div>
+            </div>
+            <ad-analytics></ad-analytics>
+        </div>
+    </div>
+</div>

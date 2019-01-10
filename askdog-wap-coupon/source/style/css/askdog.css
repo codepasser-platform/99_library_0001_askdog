@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+/**颜色**/
+.color-light-blue {
+    color: #E1EFFF !important;
+}
+
+.color-blue {
+    color: #20b5ff !important;
+}
+
+.color-blue-dark {
+    color: #3688E5 !important;
+}
+
+.color-extra-dark-blue {
+    color: #325779 !important;
+}
+
+.color-purple {
+    color: #586BE9 !important;
+}
+
+.color-dark-purple {
+    color: #2E3FB5 !important;
+}
+
+.color-snow {
+    color: #F2F4F9 !important;
+}
+
+.color-smoke {
+    color: #E2E7F2 !important;
+}
+
+.color-silver {
+    color: #C1C8DA !important;
+}
+
+.color-slate {
+    color: #8792A4 !important;
+}
+
+.color-steel {
+    color: #5A636F !important;
+}
+
+.color-black {
+    color: #1A1A1A !important;
+}
+
+.color-green {
+    color: #2EDE73 !important;
+}
+
+.color-dark-green {
+    color: #36C46E !important;
+}
+
+.color-alert {
+    color: #EC5950 !important;
+}
+
+.color-vip {
+    color: #FFCB60 !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica, Arial", "Microsoft YaHei", "PingFang SC", "Heiti SC", 'WenQuanYi Micro Hei' !important;
+    background: #fff;
+}
+
+/* CSS Document end*/
+
+/* CSS Base layout */
+/******************* footer ***************/
+
+/* CSS Base layout end*/
+
+/* CSS Base container */
+.header-container {
+    min-height: 50px;
+}
+
+.store-container, .cash-list-container, .cash-detail-container, .contact-us-container {
+    padding-bottom: 48px;
+}
+
+.home-container {
+    padding-bottom: 52px;
+}
+
+.footer-container {
+    width: 100%;
+    line-height: 34px;
+    position: fixed;
+    bottom: 0;
+    background: #1a1a1a;
+    opacity: 0.85;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.footer-container .footer-link {
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-container .footer-link.active {
+    color: #ff7b00;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CSS Base container end*/
+
+/* CSS Base modal */
+.modal.modal-default .modal-dialog .modal-include .dialog-container {
+    margin-top: 45%;
+}
+
+.modal.modal-toast .modal-dialog .modal-include .dialog-container {
+    margin-top: 45%;
+}
+
+.modal.modal-toast .modal-dialog {
+    margin: 40px;
+}
+
+.modal.modal-toast .modal-dialog .modal-include .dialog-container .modal-body .toast-icon {
+    font-size: 50pt;
+}
+
+.modal.modal-toast .modal-dialog .modal-include .dialog-container .modal-body .toast-success {
+    color: #ff7b00;
+    font-size: 18px;
+    padding-top: 11px;
+    padding-bottom: 17px;
+}
+
+.modal.modal-toast .modal-dialog .modal-include .dialog-container .modal-body .toast-fail {
+    color: #5f5f5f;
+    margin: 0 auto 30px auto;
+}
+
+.modal.modal-toast .modal-dialog .modal-include .dialog-container .modal-body .toast-message {
+    font-size: 18px;
+    color: #5f5f5f;
+    line-height: 30px;
+}
+
+.modal.modal-toast .modal-dialog .modal-include .dialog-container .modal-body .toast-message.toast-remarks {
+    font-size: 14px;
+    color: #5f5f5f;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 18px;
+}
+
+/* CSS Base modal end*/
+
+.message-container .modal-body {
+    text-align: center;
+    font-size: 16px;
+    color: #030303;
+    padding: 30px;
+}
+
+.message-container .modal-footer {
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #c0c0c0;
+}
+
+.message-container .modal-footer .btn {
+    font-size: 16px;
+    background-color: transparent;
+    margin: 0;
+    width: 50%;
+    border: none;
+    border-radius: 0;
+    line-height: 30px;
+}
+
+.message-container .modal-footer .btn-sure {
+    border-left: 1px solid #c0c0c0;
+}
+
+.modal.modal-default .modal-dialog {
+    margin: 40px;
+}
+

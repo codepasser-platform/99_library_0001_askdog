@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+<include resource="org/springframework/boot/logging/logback/base.xml"/>
+<logger name="org.springframework.web" level="DEBUG"/>
+
+<!--logback redis appender-->
+<appender name="LOGSTASH" class="com.cwbase.logback.RedisAppender">
+    <host>192.168.0.9</host>
+    <port>6379</port>
+    <key>logstash</key>
+</appender>
+
+<appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="LOGSTASH" />
+</appender>
+
+<logger name="com.askdog"  level="INFO">
+    <appender-ref ref="ASYNC" />
+</logger>
+
+<root level="INFO">
+    <appender-ref ref="CONSOLE" />
+</root>
+</configuration>

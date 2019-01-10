@@ -1,0 +1,63 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/DetailController','style/css/pages/store-list.css','lib/jquery/video/css/video-js.css']">
+        <div class="detail-container" ng-controller="DetailController">
+            <div class="text-center" ng-if="!detail">
+                <button class="btn btn-link" ng-show="loadingCompleted"></button>
+                <button class="btn btn-link btn-load"  ng-hide="loadingCompleted"><img src="style/images/loading-fail.gif" alt="" class="loading"/> 正在加载</button>
+            </div>
+            <div class="business">
+                <div class="business-contain">
+                    <div class="business-item store-contain">
+                        <div class="video-layout">
+                            <video-view content="detail"></video-view>
+                        </div>
+                        <div class="store-detail-title">
+                            {{detail.name}}
+                            <!--<a class="store-detail-vope"-->
+                            <!--animation-->
+                            <!--animate-type="zoom"-->
+                            <!--animate-event="click"-->
+                            <!--animate-duration="400"-->
+                            <!--animate-selector=".animate-hand"-->
+                            <!--href="javascript:void(0);">-->
+                            <!--<i class="iconfont icon-shipinxiangqingyetubiao animate-hand"></i>-->
+                            <!--<span>355</span>-->
+                            <!--</a>-->
+                        </div>
+                        <div class="store-detail-describe">
+                            {{detail.description}}
+                        </div>
+                        <div class="store-detail-info clearfix">
+                            <!--<i class="iconfont icon-address"></i>-->
+                            <div>{{detail.store.address}}</div>
+                            <!--<i class="iconfont icon-mobile"></i>-->
+                            <div>
+                                <a href="tel:{{detail.store.phone}}"> {{detail.store.phone}}</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-footer" ng-if="detail.coupon_normal || detail.coupon_forwarded">
+                            <div class="detail-footer-cen">
+                                <span ng-if="detail.coupon_normal">
+                                    <span class="detail-footer-icon">￥</span><span class="detail-footer-number">{{detail.coupon_normal}}</span><span
+                                        class="detail-footer-coupon">优惠券</span>
+                                    <button class="btn detail-footer-receive" ng-click="receiveCoupon(detail.id)"
+                                            auth-required>立即领取
+                                    </button>
+                                </span>
+                                <div class="pull-right detail-footer-content" ng-if="detail.coupon_forwarded">
+                                    转发视频领取
+                                    <br>
+                                    {{detail.coupon_forwarded}}元优惠券
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <wechat-share content="detail" share-type="detail"></wechat-share>
+            </div>
+            <ad-analytics></ad-analytics>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+package com.askdog.android.activity.cash;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.webkit.ConsoleMessage;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+
+import com.askdog.android.BaseActivity;
+import com.askdog.android.R;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class IncomeDetailActivity extends BaseActivity {
+    @Bind(R.id.navi_title)
+    TextView title;
+    @Bind(R.id.test_webview)
+    WebView webView;
+    private FrameLayout frameLayout = null;
+    private WebChromeClient chromeClient = null;
+    private View myView = null;
+    private WebChromeClient.CustomViewCallback myCallBack = null;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_income_detail);
+        ButterKnife.bind(this);
+        initView();
+        if(savedInstanceState != null){
+            webView.restoreState(savedInstanceState);
+        }
+    }
+
+    private void initView() {
+        title.setText("我的收入");
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+
+
+        webView.setWebViewClient(new MyWebviewCient());
+
+        chromeClient = new MyChromeClient();
+
+        webView.setWebChromeClient(chromeClient);
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
+
+        webView.setHorizontalScrollBarEnabled(false);
+        webView.setVerticalScrollBarEnabled(false);
+
+        final String USER_AGENT_STRING = webView.getSettings().getUserAgentString() + " Rong/2.0";
+        webView.getSettings().setUserAgentString( USER_AGENT_STRING );
+        webView.getSettings().setSupportZoom(false);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.loadUrl("http://m.tunnel.qydev.com/#/video/281509339453966");
+    }
+    public class MyWebviewCient extends WebViewClient {
+        @Override
+        public WebResourceResponse shouldInterceptRequest(WebView view,
+                                                          String url) {
+            WebResourceResponse response = null;
+            response = super.shouldInterceptRequest(view, url);
+            return response;
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            // TODO Auto-generated method stub
+            super.onPageFinished(view, url);
+            Log.d("dream", "***on page finished");
+            webView.loadUrl("javascript:myFunction()");
+        }
+
+    }
+
+    public class MyChromeClient extends WebChromeClient{
+
+        @Override
+        public void onShowCustomView(View view, CustomViewCallback callback) {
+            if(myView != null){
+                callback.onCustomViewHidden();
+                return;
+            }
+            frameLayout.removeView(webView);
+            frameLayout.addView(view);
+            myView = view;
+            myCallBack = callback;
+        }
+
+        @Override
+        public void onHideCustomView() {
+            if(myView == null){
+                return;
+            }
+            frameLayout.removeView(myView);
+            myView = null;
+            frameLayout.addView(webView);
+            myCallBack.onCustomViewHidden();
+        }
+
+        @Override
+        public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
+            // TODO Auto-generated method stub
+            Log.d("ZR", consoleMessage.message()+" at "+consoleMessage.sourceId()+":"+consoleMessage.lineNumber());
+            return super.onConsoleMessage(consoleMessage);
+        }
+    }
+    @OnClick({R.id.navi_back})
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.navi_back:
+                finish();
+                break;
+        }
+    }
+}

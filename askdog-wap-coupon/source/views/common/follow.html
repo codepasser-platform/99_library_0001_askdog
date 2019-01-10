@@ -1,0 +1,11 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/FollowController']">
+        <div class="follow" ng-controller="FollowController" ng-show="subscribed!=undefined && !subscribed">
+            <span class="footer-follow">关注"惠券"，更多商家优惠等您拿</span>
+            <button class="btn pull-right follow-btn" ui-sref="layout.view.qr-code">
+                <i class="iconfont icon-more"></i>
+                关注
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="HYCashDetailTopTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="120.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuD-bd-0s0">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计提现金额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEV-i8-B1o">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="N6W-Ys-TBN"/>
+                                    <constraint firstAttribute="height" constant="21" id="VDH-xx-k5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥22688.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-ZX-LRO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="mCD-vQ-LeC"/>
+                                    <constraint firstAttribute="width" constant="272" id="pTl-7p-yll"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29411764709999999" green="0.30980392159999998" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pEV-i8-B1o" firstAttribute="top" secondItem="LuD-bd-0s0" secondAttribute="top" constant="19" id="JXO-0Y-fsD"/>
+                            <constraint firstItem="p4S-ZX-LRO" firstAttribute="centerX" secondItem="LuD-bd-0s0" secondAttribute="centerX" id="NUl-Jw-nqE"/>
+                            <constraint firstItem="p4S-ZX-LRO" firstAttribute="top" secondItem="pEV-i8-B1o" secondAttribute="bottom" constant="14" id="OhI-j5-gDw"/>
+                            <constraint firstItem="pEV-i8-B1o" firstAttribute="centerX" secondItem="LuD-bd-0s0" secondAttribute="centerX" id="T5p-gX-6Fa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="LuD-bd-0s0" secondAttribute="bottom" constant="-5" id="NUS-MA-bDE"/>
+                    <constraint firstItem="LuD-bd-0s0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="P0m-sF-3ZZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="LuD-bd-0s0" secondAttribute="trailing" constant="-8" id="SQt-9X-a1g"/>
+                    <constraint firstItem="LuD-bd-0s0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="TBi-6I-Ogq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblTotalMoneyNumber" destination="p4S-ZX-LRO" id="JyG-Lh-vD5"/>
+            </connections>
+            <point key="canvasLocation" x="501" y="303.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddffffff"
+    tools:context=".activity.login.RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/upload_main_back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/popup_back_btn"
+            android:layout_width="@dimen/common_margin20"
+            android:layout_height="@dimen/common_margin20"
+            android:src="@drawable/delete" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin5"
+            android:text="@string/cancel_text"
+            android:textSize="@dimen/common_textsize_type20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/upload_main_back_layout"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/popup_video_btn"
+                android:layout_width="72dp"
+                android:layout_height="42dp"
+                android:src="@drawable/video_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:text="@string/videoshare_text"
+                android:textSize="@dimen/common_textsize_type20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/popup_audio_btn"
+                android:layout_width="72dp"
+                android:layout_height="42dp"
+                android:src="@drawable/word_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:text="@string/wordshare_text"
+                android:textSize="@dimen/common_textsize_type20" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--以此为分界线-->
+
+</RelativeLayout>

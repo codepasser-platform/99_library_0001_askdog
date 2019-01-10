@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_bg_radius"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <Button
+            android:id="@+id/dialog_btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/dialog_string_camera"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/common_textsize_type22" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sliver" />
+
+        <Button
+            android:id="@+id/dialog_btn_album"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/dialog_string_album"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/common_textsize_type22" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_margin10"
+        android:background="@android:color/transparent" />
+
+
+    <Button
+        android:id="@+id/dialog_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/white_bg_radius"
+        android:layout_marginBottom="@dimen/common_margin10"
+        android:padding="1dp"
+        android:text="@string/alert_dialog_cancel"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/common_textsize_type22" />
+</LinearLayout>

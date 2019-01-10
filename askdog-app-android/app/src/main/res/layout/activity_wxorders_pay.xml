@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.askdog.android.wxapi.WXOrdersPayActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:layout_marginLeft="@dimen/common_margin10"
+                android:layout_marginBottom="@dimen/common_margin5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_margin3"
+                    android:text="订单详情:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type16" />
+
+                <TextView android:id="@+id/wx_order_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_margin3"
+                    android:text="ASKDOG商品"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin10"
+                android:layout_marginBottom="@dimen/common_margin10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单金额: ¥"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type16" />
+
+                <TextView android:id="@+id/wx_pay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/common_margin3"
+                    android:text="1.0元"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type16" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sliver"
+                android:paddingBottom="@dimen/common_margin10"
+                android:paddingLeft="@dimen/common_textsize_type10"
+                android:paddingTop="@dimen/common_margin10"
+                android:text="支付方式"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_textsize_type16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/common_margin5"
+                    android:paddingBottom="@dimen/common_margin5"
+                    android:paddingTop="@dimen/common_margin5"
+                    android:src="@drawable/paylogo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信支付"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_textsize_type22" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView android:id="@+id/wx_order_pay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/common_margin20"
+
+            android:background="@drawable/blue_bg_btn"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_textsize_type26" />
+    </RelativeLayout>
+</LinearLayout>

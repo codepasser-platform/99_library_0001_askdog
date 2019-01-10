@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="51" id="KGk-i7-Jjw" customClass="HYVideoSharePriceTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsD-R1-F8j">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIs-ai-f1l">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="imi-ga-0Ye"/>
+                                    <constraint firstAttribute="width" constant="109" id="vVZ-a4-Lca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24O-9O-L6m">
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="FeS-LX-80P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入价格（元）" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Whz-vZ-km9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1rm-QQ-6Om"/>
+                                    <constraint firstAttribute="width" constant="145" id="UTL-E4-ppy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="mXT-aQ-Lqa"/>
+                                </connections>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGG-ht-xE0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="8DO-m8-Dyp"/>
+                                    <constraint firstAttribute="height" constant="31" id="fUW-Tz-5D7"/>
+                                </constraints>
+                                <color key="onTintColor" red="0.0" green="0.66666666669999997" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="ksw-Xd-HqX"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIP-cT-twg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="7K5-d4-SHK"/>
+                                    <constraint firstAttribute="width" constant="14" id="ngp-9Z-ChO"/>
+                                </constraints>
+                                <state key="normal" image="radio1"/>
+                                <state key="selected" image="radio"/>
+                                <state key="highlighted" image="radio"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HdM-DO-qv3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pGG-ht-xE0" firstAttribute="centerY" secondItem="fsD-R1-F8j" secondAttribute="centerY" id="4A2-7k-FoC"/>
+                            <constraint firstAttribute="trailing" secondItem="MIP-cT-twg" secondAttribute="trailing" constant="15" id="830-2U-hzb"/>
+                            <constraint firstItem="BIs-ai-f1l" firstAttribute="leading" secondItem="fsD-R1-F8j" secondAttribute="leading" constant="13" id="L9S-ib-yWd"/>
+                            <constraint firstItem="Whz-vZ-km9" firstAttribute="centerY" secondItem="fsD-R1-F8j" secondAttribute="centerY" id="N5N-ul-9dm"/>
+                            <constraint firstAttribute="bottom" secondItem="24O-9O-L6m" secondAttribute="bottom" id="ObJ-L4-mnC"/>
+                            <constraint firstItem="MIP-cT-twg" firstAttribute="centerY" secondItem="fsD-R1-F8j" secondAttribute="centerY" id="UPR-fM-Y5a"/>
+                            <constraint firstItem="BIs-ai-f1l" firstAttribute="centerY" secondItem="fsD-R1-F8j" secondAttribute="centerY" id="WMg-fI-gEy"/>
+                            <constraint firstAttribute="trailing" secondItem="pGG-ht-xE0" secondAttribute="trailing" constant="15" id="fdK-QP-f4K"/>
+                            <constraint firstAttribute="trailing" secondItem="Whz-vZ-km9" secondAttribute="trailing" constant="15" id="mhf-XY-qrg"/>
+                            <constraint firstItem="24O-9O-L6m" firstAttribute="leading" secondItem="fsD-R1-F8j" secondAttribute="leading" id="pTA-pI-T1L"/>
+                            <constraint firstAttribute="trailing" secondItem="24O-9O-L6m" secondAttribute="trailing" id="zys-nX-s7F"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="fsD-R1-F8j" secondAttribute="bottom" constant="-7" id="DdT-B7-Q4X"/>
+                    <constraint firstItem="fsD-R1-F8j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="MZz-Ke-oke"/>
+                    <constraint firstItem="fsD-R1-F8j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="QDz-1O-70M"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fsD-R1-F8j" secondAttribute="trailing" constant="-4" id="Qun-GV-1oC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bkView" destination="fsD-R1-F8j" id="TNj-0I-npx"/>
+                <outlet property="btnRadio" destination="MIP-cT-twg" id="KEM-OE-e30"/>
+                <outlet property="lblTitle" destination="BIs-ai-f1l" id="GRX-p9-egE"/>
+                <outlet property="switchPrice" destination="pGG-ht-xE0" id="b9x-OP-8Ao"/>
+                <outlet property="textFieldPrice" destination="Whz-vZ-km9" id="9vF-Yn-Bkr"/>
+            </connections>
+            <point key="canvasLocation" x="526" y="310.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="radio" width="42" height="42"/>
+        <image name="radio1" width="42" height="42"/>
+    </resources>
+</document>

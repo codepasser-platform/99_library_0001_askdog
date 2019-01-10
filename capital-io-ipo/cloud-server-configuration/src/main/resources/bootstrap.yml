@@ -1,0 +1,13 @@
+# Server configuration
+spring:
+  application:
+    name: cloud-configuration
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        #git:
+        #  uri:
+        native:
+          searchLocations: classpath:/

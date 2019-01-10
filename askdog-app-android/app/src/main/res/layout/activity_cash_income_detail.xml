@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.cash.CashIncomeDetailActivity">
+
+    <include layout="@layout/common_header_navi" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin3"
+        android:background="@drawable/steel_bg_radius"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/common_margin10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10"
+            android:text="累计总收入"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_textsize_type14" />
+
+        <TextView android:id="@+id/cash_income_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10"
+            android:text="¥ 0.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_textsize_type38" />
+
+    </LinearLayout>
+
+    <com.askdog.android.view.widget.EmptyLayout
+        android:id="@+id/cash_income_emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hellosliu.easyrecyclerview.LoadMoreRecylerView
+            android:id="@+id/cash_income_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.hellosliu.easyrecyclerview.LoadMoreRecylerView>
+    </com.askdog.android.view.widget.EmptyLayout>
+</LinearLayout>

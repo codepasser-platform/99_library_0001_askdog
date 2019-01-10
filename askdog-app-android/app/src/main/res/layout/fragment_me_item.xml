@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_margin50">
+
+    <ImageView
+        android:id="@+id/me_item_icon"
+        android:layout_width="@dimen/common_item_icon_size"
+        android:layout_height="@dimen/common_item_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin15" />
+
+    <TextView
+        android:id="@+id/me_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin15"
+        android:layout_toRightOf="@id/me_item_icon"
+        android:textColor="@color/slate"
+        android:textSize="@dimen/common_textsize_type18" />
+
+    <ImageView
+        android:id="@+id/me_item_arrow"
+        android:layout_width="@dimen/common_item_icon_size"
+        android:layout_height="@dimen/common_item_icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/common_margin10"
+        android:src="@drawable/profile_right_arrow" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp"
+        android:background="@color/smoke" />
+</RelativeLayout>

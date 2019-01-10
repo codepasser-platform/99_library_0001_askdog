@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.askdog.android.activity.EditProfileActivity">
+
+        <include layout="@layout/common_header_navi" />
+
+        <RelativeLayout
+            android:id="@+id/edit_profile_avatar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_margin40"
+            android:layout_margin="@dimen/common_margin10"
+            android:background="@drawable/white_bg_radius">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_margin10"
+                android:text="个人头像"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_textsize_type16" />
+
+            <ImageView
+                android:id="@+id/edit_profile_avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_margin10"
+                android:src="@drawable/avatar_default" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin10"
+            android:layout_marginRight="@dimen/common_margin10"
+            android:background="@drawable/white_bg_radius"
+            android:orientation="vertical">
+
+            <!--姓名-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_name_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_name"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="姓名" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_name">
+
+                    <TextView
+                        android:id="@+id/edit_profile_name"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow1" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow1"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--性别-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_gender_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_gender"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="性别" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_gender">
+
+                    <TextView
+                        android:id="@+id/edit_profile_gender"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow2"
+                        android:text="未选择" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow2"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--手机号-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_phone_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_phone"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="手机号" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_phone">
+
+                    <TextView
+                        android:id="@+id/edit_profile_phone"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow3" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow3"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--职业-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_occupation_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_occupation"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="职业" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_occupation">
+
+                    <TextView
+                        android:id="@+id/edit_profile_occupation"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow4" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow4"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--学校-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_school_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_school"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="学校" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_school">
+
+                    <TextView
+                        android:id="@+id/edit_profile_school"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow5" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow5"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--专业-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_major_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_major"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="专业" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_major">
+
+                    <TextView
+                        android:id="@+id/edit_profile_major"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow6" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow6"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--省-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_province_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_province"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="所在省份" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_province">
+
+                    <TextView
+                        android:id="@+id/edit_profile_province"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow7" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow7"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--所在城市-->
+            <RelativeLayout
+                android:id="@+id/edit_profile_city_rl"
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/common_margin40">
+
+                <TextView
+                    android:id="@+id/edit_profile_label_city"
+                    style="@style/profile_item_text"
+                    android:layout_alignParentLeft="true"
+                    android:text="所在城市" />
+
+                <RelativeLayout
+                    style="@style/profile_item_rlayout"
+                    android:layout_toRightOf="@+id/edit_profile_label_city">
+
+                    <TextView
+                        android:id="@+id/edit_profile_city"
+                        style="@style/profile_item_text"
+                        android:layout_toLeftOf="@+id/edit_profile_right_arrow8" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile_right_arrow8"
+                        style="@style/profile_item_image_arrow" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--个性签名-->
+        <RelativeLayout
+            android:id="@+id/edit_profile_signature_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_margin40"
+            android:layout_margin="@dimen/common_margin10"
+            android:background="@drawable/white_bg_radius">
+
+            <TextView
+                android:id="@+id/edit_profile_label_signature"
+                style="@style/profile_item_text"
+                android:layout_alignParentLeft="true"
+                android:text="个性签名" />
+
+            <RelativeLayout
+                style="@style/profile_item_rlayout"
+                android:layout_toRightOf="@+id/edit_profile_label_signature">
+
+                <TextView
+                    android:id="@+id/edit_profile_signature"
+                    style="@style/profile_item_text"
+                    android:layout_toLeftOf="@+id/edit_profile_right_arrow9" />
+
+                <ImageView
+                    android:id="@+id/edit_profile_right_arrow9"
+                    style="@style/profile_item_image_arrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

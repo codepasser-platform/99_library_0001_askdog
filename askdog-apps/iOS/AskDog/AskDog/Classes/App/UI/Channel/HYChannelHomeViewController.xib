@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYChannelHomeViewController" customModule="AskDog" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="XGn-pH-RO7" id="g4c-hv-rkK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XGn-pH-RO7" customClass="HYBaseUITableView" customModule="AskDog" customModuleProvider="target">
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6Iw-n1-h5G"/>
+                        <outlet property="delegate" destination="-1" id="bBG-Tz-ob8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XGn-pH-RO7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="JeJ-GC-tK3"/>
+                <constraint firstItem="XGn-pH-RO7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T40-iz-s5I"/>
+                <constraint firstAttribute="bottom" secondItem="XGn-pH-RO7" secondAttribute="bottom" id="dDd-Rf-fYp"/>
+                <constraint firstAttribute="trailing" secondItem="XGn-pH-RO7" secondAttribute="trailing" id="gmG-IO-cGS"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="XGn-pH-RO7"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="JeJ-GC-tK3"/>
+                    <exclude reference="T40-iz-s5I"/>
+                    <exclude reference="dDd-Rf-fYp"/>
+                    <exclude reference="gmG-IO-cGS"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="XGn-pH-RO7"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="JeJ-GC-tK3"/>
+                    <include reference="T40-iz-s5I"/>
+                    <include reference="dDd-Rf-fYp"/>
+                    <include reference="gmG-IO-cGS"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

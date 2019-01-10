@@ -1,0 +1,99 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/StoreController','style/css/pages/store-list.css','lib/jquery/video/css/video-js.css','lib/swiper/css/swiper.css']">
+        <div class="store-container" ng-controller="StoreController">
+            <div class="business">
+                <div class="business-contain">
+                    <div class="business-item store-contain" ng-show="loadingCompleted">
+                        <div class="video-layout" ng-if="detail.special_product">
+                            <video-view content="detail.special_product"></video-view>
+                        </div>
+                        <div ng-if="!detail.special_product" class="store-nothing"><i class="iconfont icon-shipin"></i>该餐厅还未有特色菜品
+                        </div>
+                        <div class="clearfix">
+                            <div class="business-store pull-left">
+                                <!--<i class="iconfont icon-cantingxiangqingyetubiao"></i>-->
+                                <span class="business-store-name">{{detail.name}}</span>
+                                <div class="store-type">
+                                    <i class="iconfont icon-feature"></i>{{detail.type}}
+                                    <i class="iconfont icon-money"></i>{{detail.cpc}}
+                                </div>
+                            </div>
+                            <a class="pull-right store-coupon" auth-required ng-click="receiveCoupon(detail.id)"
+                               ng-if="detail.special_product && detail.special_product.coupons.length > 0">
+                                <div class="store-coupon-normal" ng-if="detail.coupon_normal">领取&nbsp;￥{{detail.coupon_normal}}优惠券</div>
+                                <div class="store-coupon-forwarded" ng-if="detail.coupon_forwarded">转发领取{{detail.coupon_forwarded}}元优惠券</div>
+                            </a>
+                            <div class="store-vote pull-right" ng-if="detail.special_product">
+                                <a class="store-detail-vope"
+                                   animation
+                                   animate-type="zoom"
+                                   animate-event="click"
+                                   animate-duration="400"
+                                   animate-selector=".animate-hand"
+                                   href="javascript:void(0);" ng-click="vote()" auth-required>
+                                    <i class="iconfont  animate-hand"
+                                       ng-class="{true:'icon-praise1',false:'icon-praise'}[detail.special_product.vote== 'UP']"></i><br>
+                                    <span>{{detail.special_product.statistics.up_vote_count}}</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clearfix business-detail">
+                            <table width="100%">
+                                <tr>
+                                    <td width="80%">
+                                        <div class="store-address"
+                                             map-location
+                                             location="detail.location"
+                                             name="detail.name"
+                                             address="detail.address">
+                                            <i class="iconfont icon-place"></i>
+                                            {{detail.address}}
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="store-phone "><a href="tel:{{detail.phone}}"><i
+                                                class="iconfont icon-tel"></i></a></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="store-time">营业时间</div>
+                            <div class="store-time-detail">{{detail.business_hours}}</div>
+                        </div>
+                        <div  ng-if="detail.special_product.pictures.length > 0" class="store-dish-contain">
+                            <div class="store-time">菜品推荐</div>
+                            <div class="store-dish-recommend">
+                                <div class="swiper-container" swiper swiper-container=".swiper-container">
+                                    <div class="swiper-wrapper" >
+                                        <div class="swiper-slide"  ng-repeat="item in detail.special_product.pictures">
+                                            <img ng-src="{{item | picTrans: '420w_191h_1e_1c.png'}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <div class="store-recommend-none" ng-if="detail.special_product.pictures.length == 0">
+                                    <i class="iconfont icon-wenjianjia"></i>
+                                    该商家暂时没有菜品推荐
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="text-center" ng-hide="loadingCompleted">
+                        <button class="btn btn-link btn-load">
+                            <img src="style/images/loading-fail.gif" alt="" class="loading"/>
+                            正在加载
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <wechat-share content="detail"
+                          coupons="detail.special_product.coupons"
+                          type="'store-detail'"></wechat-share>
+            <ad-analytics></ad-analytics>
+        </div>
+    </div>
+</div>

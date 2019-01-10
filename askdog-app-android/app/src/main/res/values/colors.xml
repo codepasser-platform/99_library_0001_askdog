@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--primary color-->
+    <color name="linecolor">#e7e7e7</color>
+    <color name="light_blue">#E1EFFF</color>
+    <color name="blue">#20b5ff</color>
+    <color name="dark_blue">#3688e5</color>
+    <color name="extra_dark_blue">#325779</color>
+    <color name="purple">#586be9</color>
+    <color name="dark_purple">#2e3fb5</color>
+    <!--secondary color-->
+    <color name="green">#2ede73</color>
+    <color name="dark_green">#36c46e</color>
+    <!--scheme-->
+    <color name="alert">#ec5950</color>
+    <color name="vip">#ffcb60</color>
+    <!-- background -->
+    <color name="snow">#f2f4f9</color>
+    <color name="smoke">#e2e7f2</color>
+    <color name="sliver">#c1c8da</color>
+    <color name="slate">#8792a4</color>
+    <color name="steel">#5a636f</color>
+    <color name="black">#1a1a1a</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="text_color_hint_login">#E4E4E4</color>
+    <color name="red">#ff0000</color>
+
+
+    <color name="btn_press_color">#5677fc</color>
+    <color name="btn_pressed_color">#3ca0ec</color>
+</resources>

@@ -1,0 +1,43 @@
+<div class="fragment-container">
+    <div oc-lazy-load="['module/CashListController','style/css/pages/cash-list.css','style/css/pages/store-list.css']">
+        <div class="cash-list-container" ng-controller="CashListController">
+            <div class="store-empty" ng-if="viewList.total == 0">
+                <div class="empty-font">
+                    <i class="iconfont icon-tixian-list"></i>
+                </div>
+                暂时没有优惠券，快去首页查看其他视频
+            </div>
+            <div class="text-center" ng-if="!viewList.last && !loadFail">
+                <button class="btn btn-link" ng-show="loadingCompleted"></button>
+                <button class="btn btn-link btn-load" ng-hide="loadingCompleted">
+                    <img src="style/images/loading-fail.gif" lt="" class="loading"/> 正在加载
+                </button>
+            </div>
+
+            <div class="panel panel-default coupon-list-item" ng-repeat="item in viewList.result"
+                 ng-if="viewList.result.length > 0 ">
+                <div class="panel-head"
+                     ng-class="{true:'panel-head-upgraud',false:'panel-head-normal'}[item.coupon_state == 'USED']">
+                </div>
+                <div class="panel-body">
+                    <div ui-sref="layout.view.cash-detail({'id':item.id})" class="clearfix">
+                        <div class="form-group clearfix">
+                            <div class="col-xs-5 coupon-name">{{item.store_basic.name}}</div>
+                            <div class="col-xs-6 coupon-subject pull-right">现金抵扣券</div>
+                        </div>
+                        <div class="coupon-cash pull-left">
+                            <span>￥{{item.rule}} 元</span>
+                        </div>
+                        <div class="coupon-next pull-right" ng-if="item.coupon_state == 'USED'">已使用</div>
+                        <div class="coupon-next pull-right" ng-if="item.coupon_state == 'NOT_USED'">未使用</div>
+                    </div>
+                    <div class="coupon-dashed">
+                        <span>领取时间：{{item.receive_time | date:"yyyy-MM-dd"}}</span>
+                    </div>
+                </div>
+            </div>
+            <ad-analytics></ad-analytics>
+        </div>
+    </div>
+
+

@@ -1,0 +1,52 @@
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web.socket: DEBUG
+
+server:
+  port: 8380
+
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  data:
+    mongodb:
+      host: localhost
+      database: ask-dog-store
+  datasource:
+    #platform: postgresql
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ask.dog.store
+    username: store.dog
+    password: store.dog@Gwx6TfTW63
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.exmail.qq.com
+    port: 25
+    username: test@hooying.com
+    password: Dev2016
+  freemarker:
+    checkTemplateLocation: false
+    template-loader-path: classpath:/templates/
+
+askdog:
+  master-url: http://www.askdog.com
+  base-url: http://store.askdog.com
+  cache:
+    expires:
+      cache:cell:question:interaction: 8
+  security:
+    oauth2:
+      client:
+        client-id: askdog-store
+        client-secret: Fdlw&8171xHJ
+        access-token-uri: ${askdog.master-url}/oauth/token
+        user-authorization-uri: ${askdog.master-url}/oauth/authorize
+        scope: trusted
+      resource:
+        user-info-uri: ${askdog.master-url}/oauth/userinfo

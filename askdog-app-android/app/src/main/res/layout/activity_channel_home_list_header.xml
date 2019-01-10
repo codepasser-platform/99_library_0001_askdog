@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/common_margin3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="@dimen/common_margin5">
+
+            <ImageView
+                android:id="@+id/channel_user_avatar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_margin5"
+                android:layout_toRightOf="@+id/channel_user_avatar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/channel_home_header_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:maxLines="2"
+                        android:textSize="@dimen/common_textsize_type16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/channel_header_owner_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/common_textsize_type14" />
+
+                        <TextView
+                            android:id="@+id/channel_header_create_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin3"
+                            android:textColor="@color/slate"
+                            android:textSize="@dimen/common_textsize_type12" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/channel_header_subscribe_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:background="@drawable/detail_subcribe_bg"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/channel_header_subscribe_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/purple"
+                        android:drawableLeft="@drawable/ic_profile_subscribe"
+                        android:padding="@dimen/common_margin5"
+                        android:text="订阅频道"
+                        android:textSize="@dimen/common_textsize_type14" />
+
+                    <TextView
+                        android:id="@+id/channel_header_subscribe_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:minWidth="@dimen/common_margin30"
+                        android:padding="@dimen/common_margin5"
+                        android:gravity="center"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/common_textsize_type14" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/common_margin5"
+            android:background="@color/smoke" />
+
+        <TextView android:id="@+id/channel_header_experiences_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:padding="@dimen/common_margin3"
+            android:textColor="@color/slate"
+            android:minHeight="@dimen/common_margin20"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/common_textsize_type14"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/channel_header_pulldown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/common_margin20"
+                android:layout_height="@dimen/common_margin20"
+                android:layout_margin="@dimen/common_margin3"
+                android:src="@drawable/ic_pull_down" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

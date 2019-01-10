@@ -1,0 +1,133 @@
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+server:
+  port: 7000
+
+spring:
+  jackson:
+    property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+  redis:
+    host: 192.168.99.100
+    port: 6379
+  data:
+    mongodb:
+      host: 192.168.99.100
+      database: ask-dog
+  mail:
+    host: smtp.exmail.qq.com
+    port: 25
+    username: test@hooying.com
+    password: Dev2016
+#    properties:
+#      mail.smtp.auth: true
+#      mail.smtp.starttls.enable: true
+
+askdog:
+  base-url: http://localhost:${server.port}
+  mail:
+    registration:
+      url: ${askdog.base-url}/api/user/confirm
+      token-timeout: 1
+      token-timeout-unit: DAYS
+      user-name: test@hooying.com
+      password: Dev2016
+      retry-count: 3
+    password:
+      url: ${askdog.base-url}/password/recover
+      token-timeout: 30
+      token-timeout-unit: MINUTES
+      user-name: test@hooying.com
+      password: Dev2016
+      retry-count: 3
+  web:
+    apach-urls:
+      # this chrome extension is PostMan, we using this for test RESTful APIs
+      - chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop
+  storage:
+      picture:
+        answer:
+          endpoint: oss-cn-beijing.aliyuncs.com
+          access-id: 6MJWtNSrgkljf9QF
+          access-key: aQ5HetFchFCK1FoIVPrrcITDT31Iom
+          bucket: askdog
+          policy:
+            expire-time: 60 * 5 #s
+            max-size: 1024 * 5 #k
+            base-dir: answer
+          callback:
+            url: ngtest.ngrok.cc/api/picture/storage/callback
+            host: ngtest.ngrok.cc
+            body: '{"bucket":${bucket},"object":${object},"mimeType":${mimeType},"size":${size},"type":"ANSWER"}'
+            body-type: application/json
+        avatar:
+          endpoint: oss-cn-beijing.aliyuncs.com
+          access-id: 6MJWtNSrgkljf9QF
+          access-key: aQ5HetFchFCK1FoIVPrrcITDT31Iom
+          bucket: askdog
+          policy:
+            expire-time: 60 * 5 #s
+            max-size: 1024 * 10 #k
+            base-dir: avatar
+          callback:
+            url: ngtest.ngrok.cc/api/picture/storage/callback
+            host: ngtest.ngrok.cc
+            body: '{"bucket":${bucket},"object":${object},"mimeType":${mimeType},"size":${size},"type":"AVATAR"}'
+            body-type: application/json
+  elasticsearch:
+    settings:
+      cluster.name: elasticsearch
+    hosts:
+      - address: 192.168.99.100
+        port: 9300
+
+github:
+  client:
+    id: GITHUB
+    clientId: 09da135fbbbb10ef03a4
+    clientSecret: 40932119d78824941f03b16c76db039059b940a8
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+    authenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+  definition:
+    id: id
+    nickname: name
+    avatar: avatar_url
+
+weibo:
+  client:
+    id: WEIBO
+    clientId: 2441264820
+    clientSecret: 49da0c6d565a965d732fd2935745c2dd
+    accessTokenUri: https://api.weibo.com/oauth2/access_token
+    userAuthorizationUri: https://api.weibo.com/oauth2/authorize
+    clientAuthenticationScheme: form
+    authenticationScheme: form
+  resource:
+    userIdUri: https://api.weibo.com/2/account/get_uid.json
+    userInfoUri: https://api.weibo.com/2/users/show.json?uid=%s
+  definition:
+    id: uid
+    nickname: screen_name
+    avatar: avatar_large
+
+qq:
+  client:
+    id: QQ
+    clientId: 101300041
+    clientSecret: 322072366aa19e52ab14b4011fea62b5
+    accessTokenUri: https://graph.qq.com/oauth2.0/token
+    userAuthorizationUri: https://graph.qq.com/oauth2.0/authorize
+    clientAuthenticationScheme: form
+    authenticationScheme: form
+  resource:
+    userIdUri: https://graph.qq.com/oauth2.0/me
+    userInfoUri: https://graph.qq.com/user/get_user_info?openid=%s&oauth_consumer_key=%s
+  definition:
+    id: openid
+    nickname: nickname
+    avatar: figureurl_qq_1

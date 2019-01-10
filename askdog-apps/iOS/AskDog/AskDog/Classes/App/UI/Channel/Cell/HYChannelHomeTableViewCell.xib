@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="305" id="KGk-i7-Jjw" customClass="HYChannelHomeTableViewCell" customModule="AskDog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="256"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zu-32-0t7">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为什么咪蒙，papi酱，同道大叔这些自媒体能逆袭火爆？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvD-69-JRO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1960784314" green="0.3411764706" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7小时前 - 浏览数 1932" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PC-aq-OVL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NlZ-cN-Hfx"/>
+                                    <constraint firstAttribute="width" constant="214" id="jfd-Ac-8V1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9Z-XN-Itp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jTB-Uk-zmO"/>
+                                    <constraint firstAttribute="width" constant="56" id="wib-cK-YF0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="25" minY="8" maxX="13" maxY="8"/>
+                                <state key="normal" image="PullDownMenu"/>
+                                <connections>
+                                    <action selector="btnMenuClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="60K-tY-XIz"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo1" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-0I-TRd">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mZR-0I-TRd" secondAttribute="height" multiplier="39:22" id="4Cl-of-jdG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S9Z-XN-Itp" secondAttribute="trailing" id="0la-ae-egz"/>
+                            <constraint firstAttribute="bottom" secondItem="6PC-aq-OVL" secondAttribute="bottom" constant="4" id="3NK-hN-cvs"/>
+                            <constraint firstItem="mZR-0I-TRd" firstAttribute="top" secondItem="5zu-32-0t7" secondAttribute="top" id="6Oc-Fg-Faf"/>
+                            <constraint firstItem="RvD-69-JRO" firstAttribute="leading" secondItem="5zu-32-0t7" secondAttribute="leading" constant="2" id="8t4-a0-zhb"/>
+                            <constraint firstAttribute="trailing" secondItem="mZR-0I-TRd" secondAttribute="trailing" id="BSk-e4-2fR"/>
+                            <constraint firstItem="RvD-69-JRO" firstAttribute="top" secondItem="mZR-0I-TRd" secondAttribute="bottom" constant="8" id="Z97-Im-UA1"/>
+                            <constraint firstItem="6PC-aq-OVL" firstAttribute="leading" secondItem="5zu-32-0t7" secondAttribute="leading" constant="4" id="jLK-M2-los"/>
+                            <constraint firstAttribute="trailing" secondItem="RvD-69-JRO" secondAttribute="trailing" constant="2" id="ncg-rP-cy9"/>
+                            <constraint firstAttribute="bottom" secondItem="S9Z-XN-Itp" secondAttribute="bottom" constant="4" id="pgL-dK-ei7"/>
+                            <constraint firstAttribute="bottom" secondItem="RvD-69-JRO" secondAttribute="bottom" constant="24" id="qls-ju-5TX"/>
+                            <constraint firstItem="mZR-0I-TRd" firstAttribute="leading" secondItem="5zu-32-0t7" secondAttribute="leading" id="wNw-dc-qpo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="5zu-32-0t7" secondAttribute="trailing" constant="-1" id="2j5-fx-Vhs"/>
+                    <constraint firstItem="5zu-32-0t7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-1" id="7bW-dI-uF4"/>
+                    <constraint firstItem="5zu-32-0t7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="A5A-kS-Lre"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5zu-32-0t7" secondAttribute="bottom" constant="-6" id="bTm-kY-pDn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="bkView" destination="5zu-32-0t7" id="CKq-mB-r3L"/>
+                <outlet property="btnMenu" destination="S9Z-XN-Itp" id="e3x-L4-MVh"/>
+                <outlet property="imgView" destination="mZR-0I-TRd" id="N4o-G8-6GO"/>
+                <outlet property="lblContent" destination="RvD-69-JRO" id="b8e-68-NN2"/>
+                <outlet property="lblViewInfo" destination="6PC-aq-OVL" id="D1h-Ep-Zx4"/>
+            </connections>
+            <point key="canvasLocation" x="504" y="475.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="PullDownMenu" width="56" height="16"/>
+        <image name="demo1" width="421" height="175"/>
+    </resources>
+</document>

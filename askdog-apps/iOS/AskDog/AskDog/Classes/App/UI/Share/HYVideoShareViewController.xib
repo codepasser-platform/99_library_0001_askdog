@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYVideoShareViewController" customModule="AskDog" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="cmU-WH-V1A" id="6gH-SM-Bbq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cmU-WH-V1A">
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="6L6-Ca-22x"/>
+                        <outlet property="delegate" destination="-1" id="ZKA-eG-9jP"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cmU-WH-V1A" secondAttribute="bottom" id="Ahr-36-Nkv"/>
+                <constraint firstItem="cmU-WH-V1A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GGM-GL-dgU"/>
+                <constraint firstAttribute="trailing" secondItem="cmU-WH-V1A" secondAttribute="trailing" id="hTG-OK-F15"/>
+                <constraint firstItem="cmU-WH-V1A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="68" id="mux-gQ-3IV"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="cmU-WH-V1A"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Ahr-36-Nkv"/>
+                    <exclude reference="GGM-GL-dgU"/>
+                    <exclude reference="hTG-OK-F15"/>
+                    <exclude reference="mux-gQ-3IV"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="cmU-WH-V1A"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Ahr-36-Nkv"/>
+                    <include reference="GGM-GL-dgU"/>
+                    <include reference="hTG-OK-F15"/>
+                    <include reference="mux-gQ-3IV"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

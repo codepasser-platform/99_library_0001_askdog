@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AskDogActivity">
+
+    <include layout="@layout/main_unreal_search" />
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.app.FragmentTabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/snow" />
+
+        <!-- 快速操作按钮 -->
+        <com.askdog.android.view.searchview.CircleImageView
+            android:id="@+id/quick_option_iv"
+            android:layout_width="@dimen/common_margin50"
+            android:layout_height="@dimen/common_margin50"
+            android:layout_gravity="bottom|center"
+            android:contentDescription="@null"
+            android:src="@drawable/tab_icon_add"
+            app:border_color="#FFFFFF"
+            app:border_width="5dp" />
+    </FrameLayout>
+</LinearLayout>

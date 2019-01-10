@@ -1,0 +1,112 @@
+server:
+  port: 8180
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+spring:
+  batch:
+    initializer:
+      enabled: false
+    job:
+      enabled: true
+  redis:
+    host: 192.168.99.100
+    port: 6379
+  data:
+    mongodb:
+      host: 192.168.99.100
+      database: ask-dog
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.99.100:5432/ask.dog
+    username: service.dog
+    password: service.dog@BwUbMQh401
+  jpa:
+    show-sql: true
+  freemarker:
+    checkTemplateLocation: false
+
+askdog:
+  base-url: http://localhost
+  batch:
+    initializer:
+      enabled: true
+  job:
+    index-sync:
+      cron: "*/10 * * * * *"
+      jpa:
+        hibernate.hbm2ddl.auto: create-drop
+      datasource:
+        url: jdbc:postgresql://192.168.99.100:5432/ask.dog.sync
+        driverClassName: org.postgresql.Driver
+        username: sync.dog
+        password: sync.dog@WxG8numYI3
+  score:
+    answer:
+      weight:
+        vote-up: 1
+        vote-down: 2
+        share: 4
+        favorite: 6
+    question:
+      weight:
+        viewCount: 1
+        followCount: 3
+        upVoteCount: 2
+        downVoteCount: 2
+        answerCount: 4
+        commentCount: 3
+  storage:
+    picture:
+      answer:
+        endpoint: oss-cn-hangzhou.aliyuncs.com
+        access-id: mEFBShFTJwtTLFyT
+        access-key: Kk8kV2Rx340wuKpAzH8cgyEKIczQex
+        bucket: ad-dev
+        policy:
+          expire-time: 60 * 5 #s
+          max-size: 1024 * 5 #k
+          base-dir: answer
+        callback:
+          url: askcafe.ngrok.cc/api/storage/callback
+          host: askcafe.ngrok.cc
+          body: '{"bucket":${bucket},"object":${object},"mimeType":${mimeType},"size":${size},"linkId":"${linkId}"}'
+          body-type: application/json
+      avatar:
+        endpoint: oss-cn-hangzhou.aliyuncs.com
+        access-id: mEFBShFTJwtTLFyT
+        access-key: Kk8kV2Rx340wuKpAzH8cgyEKIczQex
+        bucket: ad-dev
+        policy:
+          expire-time: 60 * 5 #s
+          max-size: 1024 * 10 #k
+          base-dir: avatar
+        callback:
+          url: askcafe.ngrok.cc/api/storage/callback
+          host: askcafe.ngrok.cc
+          body: '{"bucket":${bucket},"object":${object},"mimeType":${mimeType},"size":${size},"linkId":"${linkId}"}'
+          body-type: application/json
+      question:
+        endpoint: oss-cn-hangzhou.aliyuncs.com
+        access-id: mEFBShFTJwtTLFyT
+        access-key: Kk8kV2Rx340wuKpAzH8cgyEKIczQex
+        bucket: ad-dev
+        policy:
+          base-dir: question
+  location:
+    key: EIGBZ-WMIWF-M4TJ7-NPBLX-TO4SS-GHB3U
+    base-url: http://apis.map.qq.com
+    ip-location: '${askdog.location.base-url}/ws/location/v1/ip?ip={ip}&key=${askdog.location.key}&output=json'
+    geo-location: '${askdog.location.base-url}/ws/geocoder/v1/?location={lat},{lng}&key=${askdog.location.key}&get_poi={poi}&coord_type=5&output=json'
+    nearby-distance: 50 #kilometers
+    nearby-limit: 1000
+    rencent-limit: 100
+    rate-distance: 50 #kilometers
+  elasticsearch:
+    settings:
+      cluster.name: ask.dog
+    hosts:
+      - address: 192.168.99.100
+        port: 9300

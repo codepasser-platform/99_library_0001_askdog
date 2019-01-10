@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/common_margin3"
+    android:layout_height="@dimen/result_item_height">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/common_margin30"
+            android:layout_height="@dimen/common_margin30"
+            android:src="@drawable/profile_new_channel"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/sliver"
+            android:textSize="@dimen/common_textsize_type18"
+            android:text="创建新频道"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
