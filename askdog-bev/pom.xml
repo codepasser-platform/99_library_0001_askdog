@@ -57,7 +57,7 @@
         <aliyun-java-sdk-core.version>2.2.0</aliyun-java-sdk-core.version>
         <aliyun-java-sdk-mts.version>2.1.1</aliyun-java-sdk-mts.version>
         <aliyun-sdk-mns.version>1.1.1</aliyun-sdk-mns.version>
-        <fastjson.version>1.1.30</fastjson.version>
+        <fastjson.version>1.2.25</fastjson.version>
         <aliyun-java-sdk-cdn.version>2.2.0</aliyun-java-sdk-cdn.version>
 
         <httpclient.version>4.4</httpclient.version>
