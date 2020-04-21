@@ -1,7 +1,0 @@
-# Server configuration
-spring:
-  application:
-    name: web-xxx
-  cloud:
-    config:
-      uri: ${cloud.configuration.uri:http://127.0.0.1:8888}

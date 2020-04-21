@@ -1,7 +1,0 @@
-# Server configuration
-spring:
-  application:
-    name: ipo-service
-  cloud:
-    config:
-      uri: ${cloud.configuration.uri:http://127.0.0.1:8888}
