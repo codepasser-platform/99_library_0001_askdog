@@ -40,7 +40,7 @@
         <aliyun-sdk-oss.version>2.2.1</aliyun-sdk-oss.version>
         <httpclient.version>4.4</httpclient.version>
         <hibernate-redis.version>1.6.1</hibernate-redis.version>
-        <elasticsearch.version>2.3.2</elasticsearch.version>
+        <elasticsearch.version>6.8.13</elasticsearch.version>
         <zxing.version>3.2.1</zxing.version>
         <docker.image.prefix>ask.dog</docker.image.prefix>
         <logback-redis-appender>1.1.5</logback-redis-appender>
